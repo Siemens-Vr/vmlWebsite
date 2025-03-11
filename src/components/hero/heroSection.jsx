@@ -31,11 +31,11 @@ const HeroSection = () => {
         <p className={styles.subtitle}>Revolutionizing Education In Africa</p>
         <p className={styles.description}>
           Welcome to the{" "}
-          <a href="https://siemensdekut.dkut.ac.ke/" className={styles.link}>
+          <a href="https://siemensdekut.dkut.ac.ke/" target="_blank" rel="noopener noreferrer" className={styles.link}>
             Siemens Mechatronics
           </a>{" "}
           <br />
-          <a href="https://siemensdekut.dkut.ac.ke/" className={styles.link}>
+          <a href="https://siemensdekut.dkut.ac.ke/" target="_blank" rel="noopener noreferrer"  className={styles.link}>
             Certification Centre
           </a>{" "}
           in Africa
@@ -60,14 +60,17 @@ const HeroSection = () => {
 
       {/* Right Section - Image */}
       <div className={styles.rightSection}>
-        <div className={styles.imageContainer}>
+      <div className={styles.imageContainer1}> 
+        <div className={styles.imageContainer}> 
+          </div>
           <img
             src="/images/robotic-lab.png" // Ensure this image is inside the `public/images/` folder
             alt="Robotic Lab"
             className={styles.heroImage}
           />
         </div>
-      </div>
+        </div>
+
     </section>
   );
 };
