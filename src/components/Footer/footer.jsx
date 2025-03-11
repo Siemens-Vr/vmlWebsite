@@ -13,10 +13,10 @@ const Footer = () => {
           {/* Social Icons */}
           <div className={styles.socialIcons}>
             <a href="#" className={styles.icon}><FaFacebookF /></a>
-            <a href="https://www.linkedin.com/in/virtual-mechatronics-labs-914389337/" className={styles.icon}><FaLinkedinIn /></a>
-            <a href="https://x.com/VRAfrica_Dekut" className={styles.icon}><FaTwitter /></a>
-            <a href="#" className={styles.icon}><FaInstagram /></a>
-            <a href="https://www.tiktok.com/@vrafrica_dekut2" className={styles.icon}><FaTiktok   /></a>              
+            <a href="https://www.linkedin.com/in/virtual-mechatronics-labs-914389337/" target="_blank" rel= "noopener noreferrer" className={styles.icon}><FaLinkedinIn /></a>
+            <a href="https://x.com/VRAfrica_Dekut" target="_blank" rel= "noopener noreferrer" className={styles.icon}><FaTwitter /></a>
+            <a href="#" target="_blank" rel= "noopener noreferrer"className={styles.icon}><FaInstagram /></a>
+            <a href="https://www.tiktok.com/@vrafrica_dekut2" target="_blank" rel= "noopener noreferrer" className={styles.icon}><FaTiktok   /></a>              
           </div>
         </div>
 
@@ -25,8 +25,8 @@ const Footer = () => {
           <div className={styles.column}>
             <h3>Popular Links</h3>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms & Conditions</a></li>
               <li><a href="#">Careers</a></li>
