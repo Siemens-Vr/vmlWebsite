@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import styles from "../../styles/hero/heroSection.module.css";   
-import Navbar from "../navbar/navbar";
+import styles from "../hero/heroSection.module.css";   
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState("00:00:00");
 
   useEffect(() => {
-    const targetDate = new Date("2025-04-01T00:00:00"); // Example deadline
+    const targetDate = new Date("2025-04-01T00:00:00"); 
     const interval = setInterval(() => {
       const now = new Date();
       const difference = targetDate - now;
