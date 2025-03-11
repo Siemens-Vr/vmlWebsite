@@ -1,0 +1,107 @@
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    background: linear-gradient(to right, #93c5fd, #dbeafe, #e9d5ff);
+  }
+  
+  .leftSection {
+    width: 50%;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+  
+  .subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .description {
+    margin-top: 0.5rem;
+    color: #4b5563;
+  }
+  
+  .link {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+  
+  .countdown {
+    margin-top: 1rem;
+    color: #374151;
+  }
+  
+  .countdownBoxes {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+  
+  .countdownBox {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1e3a8a;
+    border-radius: 6px;
+  }
+  
+  .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .applyButton {
+    padding: 0.5rem 1.5rem;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .applyButton:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .detailsButton {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #1e3a8a;
+    color: #1e3a8a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .detailsButton:hover {
+    background-color: #dbeafe;
+  }
+  
+  .rightSection {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .imageContainer {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
