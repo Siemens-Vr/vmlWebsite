@@ -109,3 +109,376 @@
     background: #1f1f4c;
   }
   
+  .chooseUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+  }
+
+  .parachoose{
+    text-justify: auto;
+  }
+
+/* //dfghy*/
+.chooseUs {
+  min-height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background: linear-gradient(to right, #c0e0f5, #d3dce6);
+  padding: 40px;
+}
+
+.contentWrapperReversed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.textContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.textContainer h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.textContainer h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #111;
+}
+
+.paraChoose {
+  color: #555;
+  margin-top: 15px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Bullet List Styling */
+.lists {
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.lists li {
+  position: relative;
+  padding-left: 25px;
+  margin: 8px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.lists li::before {
+  content: "•";
+  color: #007bff;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+/* projects page */
+.projectsSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fc;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.subHeading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.projectCard {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  background: #1e1e6e;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.imageOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 0 0 20px;
+  filter: brightness(0.8);
+}
+
+.textprojectContainer h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.textprojectContainer p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Testimonial Section */
+.testimonialSection {
+  background: #f8f9fc;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.testimonialTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.testimonialHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.testimonialDescription {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #666;
+}
+
+/* Testimonial Wrapper */
+.testimonialWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Large Testimonial Card */
+.testimonialCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 60%;
+  position: relative;
+  text-align: left;
+}
+
+.quoteIcon {
+  font-size: 2.5rem;
+  color: #1e1e6e;
+}
+
+.testimonialText {
+  font-size: 1rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Client Info */
+.clientInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.clientAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 15px;
+}
+
+.clientName {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.clientPosition {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Small Testimonial Card */
+.smallTestimonialCard {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 20%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clientAvatarSmall {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto 10px;
+}
+
+.clientNameSmall {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.clientPositionSmall {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: #1e1e6e;
+}
+
+/* Patners */
+.partnersSection {
+  background: linear-gradient(to bottom, #b0d3f5, #a6c2d9);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 50px 50px 0 0;
+}
+
+.partnersTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4c4c4c;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.partnersDescription {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  color: navy;
+}
+
+.footer {
+  background: #12123d;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: white;
+}

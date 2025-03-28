@@ -1,0 +1,335 @@
+.aboutSection {
+    padding: 60px 10%;
+    background: #f8f8f8;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* .imageContainer {
+    width: 400px;
+    height: 400px;
+    background: url('/images/mechatronics-lab.jpg') no-repeat center/cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  } */
+  
+  .textContainer {
+    max-width: 500px;
+  }
+  
+  .textContainer h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .textContainer p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  .readMore {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  .readMore:hover {
+    background: #0056b3;
+  }
+
+  /* vrabout */
+  .vrSection {
+    padding: 60px 10%;
+    background: #f5f5f5;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .textContainer {
+    max-width: 500px;
+  }
+  
+  .textContainer h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .textContainer p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  /* .imageContainer {
+    width: 500px;
+    height: 300px;
+    background: url('/images/vr-experience.jpg') no-repeat center/cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+   */
+
+
+   /* Know us more */
+
+   .knowUsSection {
+    padding: 60px 10%;
+    background: linear-gradient(to right, #88c7ff, #b3e0ff);
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .centerCard {
+    transform: translateY(-20px);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  /* FAQS */
+  .faqSection {
+    padding: 50px 10%;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .subHeading {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faqItem {
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .faqItem:hover {
+    background: #191970; /* Turns blue on hover */
+    color: white;
+  }
+  
+  .faqItem.active {
+    background: #191970;
+    color: #fff;
+  }
+  
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  .number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #191970;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .text {
+    flex-grow: 1;
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  .icon {
+    background: white;
+    color: #191970;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .answer {
+    padding: 15px;
+    background: #e0e0e0;
+    color: #222;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  /* campany testimonial */
+  .testimonialSection {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f4f4;
+  }
+  
+  .testtitle {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .testsubtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .testdescription {
+    font-size: 16px;
+    color: #666;
+    margin: 10px auto;
+    max-width: 600px;
+  }
+  
+  .testcarousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  .comptestimonialCard {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .carImage {
+    width: 80%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .content h4 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .location {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .message {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .prevButton,
+  .nextButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+  }
+  
+  .dots {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active {
+    background: #333;
+  }
+  
