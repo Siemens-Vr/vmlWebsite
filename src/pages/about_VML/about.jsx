@@ -3,6 +3,7 @@ import React,  { useState, useEffect }  from 'react'
 import styles from './about.module.css';
 import { Plus, Minus } from "lucide-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Hero from "../../components/hero/heroSection";
 
 const faqs = [
   {
@@ -80,6 +81,7 @@ const AboutPage = () => {
   };
 return (
     <div>
+         <Hero page="about" />
         <section className={styles.aboutSection}>
       <div className={styles.contentWrapper}>
         <div className={styles.imageContainer}>
@@ -232,9 +234,25 @@ return (
         ))}
       </div>
     </section>
-    </div>
-    
-  )
-}
+
+    {/* Partners Logos Carousel */}
+<section className={styles.partnersSection}>
+  <div className={styles.partnersCarousel}>
+    <button className={styles.carouselButtonLeft}>&lt;</button>
+
+    <div className={styles.partnerLogo}></div>
+    <div className={styles.partnerLogo}></div>
+    <div className={styles.partnerLogo}></div>
+    <div className={styles.partnerLogo}></div>
+    <div className={styles.partnerLogo}></div>
+    <div className={styles.partnerLogo}></div>
+
+    <button className={styles.carouselButtonRight}>&gt;</button>
+  </div>
+</section>
+
+      </div>
+   );
+  };
 
 export default AboutPage;

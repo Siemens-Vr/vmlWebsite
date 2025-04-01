@@ -3,7 +3,8 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Navbar from "../src/components/navbar/navbar";
 import Footer from "./components/Footer/footer";
 import HomePage from "./pages/home/home";
-import AboutPage from "./pages/about_VML/about"
+import AboutPage from "./pages/about_VML/about";
+import HeroSection from "../src/components/hero/heroSection";
 import AboutTeamPage from "./pages/about_teams/about_teams"
 
 export default function Home() {
@@ -15,8 +16,8 @@ export default function Home() {
     
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/about_teams" element={<AboutPage />} />
+        <Route path="/about-vml" element={<AboutPage />} />
+        <Route path="/about-teams" element={<AboutTeamPage />} />
       </Routes>
 
      

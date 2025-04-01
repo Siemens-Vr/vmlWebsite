@@ -20,7 +20,7 @@ const Navbar = () => {
         <li className={styles.dropdown} 
             onMouseEnter={() => setDropdownOpen(true)} 
             onMouseLeave={() => setDropdownOpen(false)}>
-          <a href="/about" className={styles.navItem}>About <ChevronDown size={14} /></a>
+          <a href="" className={styles.navItem}>About <ChevronDown size={14} /></a>
           
           {dropdownOpen && (
             <ul className={styles.dropdownMenu}>
