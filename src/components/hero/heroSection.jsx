@@ -1,5 +1,52 @@
 import React, { useState, useEffect } from "react";
 import styles from "./heroSection.module.css";
+import image1 from "../../assets/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg";
+import Team from "../team/team";
+// import team from "../team/team";
+
+
+
+const teamMembers = [
+  { name: "Administration", image: {image1}, link: "/administration" },
+  { name: "Virtual Reality", image: "vr.jpg", link: "/virtual-reality" },
+  { name: "Software Developers", image: "software.jpg", link: "/software-developers" },
+  { name: "Virtual Mechatronics", image: "mechatronics.jpg", link: "/virtual-mechatronics" }
+];
+
+const TeamCarousel = () => {
+  const [selectedDepartment, setSelectedDepartment] = useState(null);
+
+
+  const handleclick= (name) =>{
+    console.log(name)
+    setSelectedDepartment(name); // ✅ Set department to pass as prop
+  }
+
+  return (
+    <div className="carousel-container">
+      <h2>
+        Meet our <span className="highlight">Talented</span> team members
+      </h2>
+      <p>Our diverse team of skilled professionals is dedicated to driving innovation and excellence in our projects</p>
+      <div className="carousel">
+        {teamMembers.map((member, index) => (
+          <div
+            key={index}
+            className="team-card"
+            onClick={() => handleclick(member.name)}
+          >
+            <img src={member.image} alt={member.name} />
+            <p>{member.name}</p>
+          </div>
+        ))}
+      </div>
+
+
+{selectedDepartment && <Team name={selectedDepartment} />}
+    </div>
+  );
+};
+
 
 const Hero = ({ page }) => {
   const [timeLeft, setTimeLeft] = useState("00:00:00");
@@ -97,15 +144,41 @@ const Hero = ({ page }) => {
       </section>
       )}
 
-      {page === "aboutTeams" && (
+      {page === "about_teams" && (
         <div className={styles.heroContent}>
           <h1 className={styles.title}>Meet Our Teams</h1>
           <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Lab</p>
           <p className={styles.description}>
             Discover the talented individuals who make our lab a success.
           </p>
+          <TeamCarousel />
         </div>
       )}
+     
+     {page === "sifa" &&(
+     <div className={styles.sifaHeroContainer}>
+      <div className={styles.sifaHeroCard}>
+        {/* Left Side - Image */}
+        <div className={styles.sifaImageContainer}>
+          <img src="/images/placeholder.jpg" alt="SIFA Initiative" className={styles.sifaHeroImage} />
+        </div>
+
+        {/* Right Side - Text Content */}
+        <div className={styles.sifaTextContainer}>
+          <h2 className={styles.sifaTitle}>
+            <span className={styles.sifaHighlight}>SKILLS</span> <br />
+            INITIATIVE <br />
+            FOR <br />
+            <span className={styles.sifaHighlight}>AFRICA</span>
+          </h2>
+          <p className={styles.sifaDescription}>
+            SIFA is designed to address the skills gap in Africa by strengthening technical and 
+            vocational education and training.
+          </p>
+        </div>
+      </div>
+    </div>
+    )}
     </section>
   );
 };

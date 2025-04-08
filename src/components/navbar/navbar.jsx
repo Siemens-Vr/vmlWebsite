@@ -31,7 +31,7 @@ const Navbar = () => {
         </li>
 
         <li><a href="/worldskill">WorldSkill</a></li>
-        <li><a href="/sifa">SIFA</a></li>
+        <li><a href="/sifa">SIFA(AUDA-NEPAD)</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/contacts">Contacts</a></li>
       </ul>

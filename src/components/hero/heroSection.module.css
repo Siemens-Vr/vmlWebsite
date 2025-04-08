@@ -203,3 +203,136 @@
     }
   }
   
+  /* TeamCarousel.css */
+.carousel-container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #ddeeff, #b0c4de);
+  border-radius: 12px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #4b0082;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px 0;
+}
+
+/* Sifahero */
+.sifaHeroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #b3d9e5, #87c3a3);
+  padding: 50px 20px;
+  height: 500px;
+  position: relative;
+}
+
+.sifaHeroCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left Image Container */
+.sifaImageContainer {
+  flex: 1;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.sifaHeroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Right Text Container */
+.sifaTextContainer {
+  flex: 1;
+  padding: 30px;
+  text-align: left;
+}
+
+.sifaTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.sifaHighlight {
+  color: #1e1e68;
+}
+
+.sifaDescription {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Shadow Effect */
+.sifaHeroContainer::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  filter: blur(20px);
+  border-radius: 50%;
+}

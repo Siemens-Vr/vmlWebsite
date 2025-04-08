@@ -270,8 +270,6 @@ const Home = () => {
     <button className={styles.carouselButtonRight}>&gt;</button>
   </div>
 </section>
-
-      {/* Add other sections as needed */}
     </div>
   );
 };

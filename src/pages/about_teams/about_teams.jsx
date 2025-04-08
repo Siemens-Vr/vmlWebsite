@@ -1,9 +1,12 @@
 import React from 'react'
+import Hero from "../../components/hero/heroSection";
 
 const about_teams = () => {
   return (
-    <div>about_teams</div>
+    <div>
+       <Hero page="about_teams" />
+      about_teams</div>
   )
 }
 
-export default about_teams
+export default about_teams;
