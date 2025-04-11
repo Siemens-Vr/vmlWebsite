@@ -1,0 +1,115 @@
+.wwdSection {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px #c4c4c4;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .textContainer {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .subheading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .videoPlaceholder {
+    flex: 1;
+    width: 500px;
+    height: 350px;
+    background: linear-gradient(135deg, #d0e8f2, #b3d9df);
+    border-radius: 1.5rem;
+    box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Car assembly */
+  .car-assembly-section {
+    background-color: #f4f4f4;
+    padding: 4rem 1rem;
+    font-family: sans-serif;
+  }
+  
+  .car-assembly-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .car-assembly-image {
+    width: 480px;
+    height: 360px;
+    background-color: #e0e0e0;
+    border-radius: 0.25rem;
+  }
+  
+  .car-assembly-text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .car-assembly-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .car-assembly-description {
+    font-size: 1rem;
+    color: #1f1f1f;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .car-assembly-button {
+    align-self: flex-start;
+    padding: 0.6rem 1.4rem;
+    background-color: transparent;
+    border: 2px solid #4b4bff;
+    color: #4b4bff;
+    font-weight: 700;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .car-assembly-button:hover {
+    background-color: #4b4bff;
+    color: #fff;
+  }
+  

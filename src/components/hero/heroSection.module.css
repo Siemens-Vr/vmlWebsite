@@ -4,6 +4,8 @@
     justify-content: space-between;
     padding: 5rem 2rem;
     background: linear-gradient(to right, #93c5fd, #dbeafe, #e9d5ff);
+    border-radius:  0px 0px 50px 50px;
+    box-shadow: inset;
   }
   
   .leftSection {
@@ -335,4 +337,75 @@ h2 {
   background: rgba(0, 0, 0, 0.1);
   filter: blur(20px);
   border-radius: 50%;
+}
+
+/* AI hero section */
+.aiHeroContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #b2e0e0, #d1c8ec, #a8dbc8);
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.aiText {
+  max-width: 50%;
+}
+
+.aiPurple {
+  color: #4e2ca3;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.aiBlack {
+  color: #000000;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.aiDescription {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #1a1a1a;
+  max-width: 90%;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.aiImagePlaceholder {
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  border-radius: 1.5rem;
+  transform: rotate(5deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter hero section */
+.newsletterHero {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #89cde9, #b8d8d4);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletterTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+.newsletterSubtitle {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2f2f84;
+  margin-top: 0.5rem;
 }

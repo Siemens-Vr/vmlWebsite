@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .videoPlaceholder {
+    background-color: #e0e0e0;
+    width: 420px;
+    height: 340px;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    max-width: 600px;
+    color: #111;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .impactTitle {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .impactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .impactList li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .impactList li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid #3b3b99; /* Indigo-colored border */
+  }
+  
+  /* Project Milestone */
+  .wrapper {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #000;
+    text-shadow: 1px 1px #ccc;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #f6f6f6;
+    color: #333;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    width: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    opacity: 0.8;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+  
+  /* 🔥 Active Card - all text turns white */
+  .card.active {
+    background-color: #16126f;
+    color: white;
+    transform: scale(1.05);
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  /* Ensures inner elements are also white */
+  .card.active h3,
+  .card.active p {
+    color: white;
+  }
+  

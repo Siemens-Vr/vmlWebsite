@@ -24,16 +24,46 @@ const Navbar = () => {
           
           {dropdownOpen && (
             <ul className={styles.dropdownMenu}>
-              <ol><a href="/about-vml">About VML</a></ol>
-              <ol><a href="/about-teams">About Teams</a></ol>
+              <li><a href="/about-vml">About VML</a></li>
+              <li><a href="/about-teams">About Teams</a></li>
             </ul>
           )}
         </li>
 
         <li><a href="/worldskill">WorldSkill</a></li>
         <li><a href="/sifa">SIFA(AUDA-NEPAD)</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contacts">Contacts</a></li>
+
+         {/* Projects Dropdown */}
+         <li className={styles.dropdown} 
+            onMouseEnter={() => setDropdownOpen(true)} 
+            onMouseLeave={() => setDropdownOpen(false)}>
+          <a href="" className={styles.navItem}>Research Projects <ChevronDown size={14} /></a>
+          
+          {dropdownOpen && (
+            <ul className={styles.dropdownMenu}>
+              <li><a href="/AR/AR">Augmented Reality</a></li>
+              <li><a href="/VR/VR">Virtual Reality</a></li>
+              <li><a href="/AI/AI">Artificial Intelligence</a></li>
+              <li><a href="/Prosthetics/Prosthetics">Prosthetics</a></li>
+            </ul>
+          )}
+        </li>
+
+         {/* Media Dropdown */}
+         <li className={styles.dropdown} 
+            onMouseEnter={() => setDropdownOpen(true)} 
+            onMouseLeave={() => setDropdownOpen(false)}>
+          <a href="" className={styles.navItem}>Media <ChevronDown size={14} /></a>
+          
+          {dropdownOpen && (
+            <ul className={styles.dropdownMenu}>
+              <li><a href="/Blogs">Blogs</a></li>
+              <li><a href="/Newsletter/news">Newsletters</a></li>
+              <li><a href="/Confrence">Confrences</a></li>
+            </ul>
+          )}
+        </li>
+  
       </ul>
 
       {/* Notification Icon */}

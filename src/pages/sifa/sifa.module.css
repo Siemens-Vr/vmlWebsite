@@ -132,14 +132,14 @@
 }
 
 /* Purpose section */
-.purpose-container {
+.purposecontainer {
     background-color: #f8f8f8;
     padding: 60px 20px;
     font-family: 'Arial', sans-serif;
     text-align: center;
   }
   
-  .purpose-title {
+  .purposetitle {
     font-size: 32px;
     font-weight: bold;
     color: #333;
@@ -147,7 +147,7 @@
     margin-bottom: 40px;
   }
   
-  .purpose-content {
+  .purposecontent {
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -159,12 +159,12 @@
   }
   
   @media (max-width: 768px) {
-    .purpose-content {
+    .purposecontent {
       flex-direction: row;
     }
   }
   
-  .purpose-image-wrapper {
+  .purposeimagewrapper {
     background: linear-gradient(to bottom, #d3ebf9, #ffffff);
     padding: 20px;
     display: flex;
@@ -180,38 +180,38 @@
     border-radius: 16px;
   }
   
-  .purpose-text {
+  .purposetext {
     flex: 1;
     text-align: left;
     padding: 30px;
   }
   
-  .purpose-heading {
+  .purposeheading {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
-  .purpose-description {
+  .purposedescription {
     font-size: 14px;
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
   }
   
-  .purpose-subheading {
+  .purposesubheading {
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 10px;
     color: #333;
   }
   
-  .purpose-stakeholders {
+  .purposestakeholders {
     list-style: none;
     padding-left: 0;
   }
   
-  .purpose-stakeholders li {
+  .purposestakeholders li {
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 10px;
@@ -220,11 +220,389 @@
     color: #333;
   }
   
-  .purpose-circle {
+  .purposecircle {
     width: 12px;
     height: 12px;
     border: 2px solid #6a1b9a;
     border-radius: 50%;
     margin-right: 10px;
+  }
+  
+  /* milesone */
+  .milestonesSection {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #b4d6f0, #c1cfe3, #dae3f3);
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2a2a72;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  /* ========== Card Styles ========== */
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+  
+  .activeCard {
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.02);
+    z-index: 1;
+  }
+  
+  /* ========== Puzzle Icon ========== */
+  .puzzleIcon {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    background-color: white;
+    color: #071947;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px 0 30px 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ========== Card Content ========== */
+  .milestoneTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #071947;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+  }
+  
+  .milestoneContent {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ========== Button Styles ========== */
+  .readMore {
+    background-color: transparent;
+    border: 2px solid #3e0db8;
+    color: #3e0db8;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+  
+  .readMore:hover {
+    background-color: #3e0db8;
+    color: white;
+  }
+  
+  .readMoreActive {
+    background-color: #3e0db8;
+    color: white;
+  }
+
+  /* role section */
+
+  .roleSection {
+    padding: 4rem 2rem;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .sectionLabel {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #222;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionDescription {
+    font-size: 1rem;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  
+  .readMoreBtn {
+    display: inline-block;
+    margin-bottom: 3rem;
+    padding: 0.6rem 1.4rem;
+    border: 2px solid #4c3f8c;
+    color: #4c3f8c;
+    background-color: transparent;
+    border-radius: 24px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .readMoreBtn:hover {
+    background-color: #4c3f8c;
+    color: #fff;
+  }
+  
+  .roleGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .roleCard {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .roleCard:hover {
+    transform: translateY(-4px);
+  }
+  
+  .iconPlaceholder {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    background-color: #ddd;
+    border-radius: 8px;
+  }
+  
+  .cardTitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1d3b8b;
+  }
+  
+  .cardText {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+  
+  /* Features section */
+  .vrSection {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .vrHeading {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px #ccc;
+  }
+  
+  .vrContentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .vrTextSection {
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .vrSubheading {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111;
+  }
+  
+  .vrParagraph {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .optionLabel {
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  .radioButton {
+    margin-top: 4px;
+  }
+  
+  .placeholders {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .placeholderBox {
+    flex: 1;
+    min-height: 60px;
+    background-color: #e4e4e4;
+    border-radius: 12px;
+  }
+  
+  /* Image Styles */
+  .vrImageContainer {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .vrImage {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 174, 239, 0.3);
+  }
+  
+  /* Intergration section */
+  .accordionSection {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .interheading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #333;
+    text-shadow: 1px 1px #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  .accordionItem {
+    margin-bottom: 1.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5e5e5;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .openHeader {
+    background-color: #1f1f60; /* dark indigo */
+    color: white;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 1.125rem;
+  }
+  
+  .toggleButton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .plus {
+    background-color: #34d399; /* green-400 */
+    color: white;
+  }
+  
+  .minus {
+    background-color: #1f1f60; /* dark indigo */
+    color: white;
+  }
+  
+  .accordionContent {
+    background-color: #f0f0f0;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+  
+  .accordionContent p {
+    margin: 0;
+  }
+  
+  .accordionContent b,
+  .accordionContent strong {
+    color: #1f1f60;
   }
   

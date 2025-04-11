@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .videoPlaceholder {
+    background-color: #e0e0e0;
+    width: 420px;
+    height: 340px;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    max-width: 600px;
+    color: #111;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .impactTitle {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .impactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .impactList li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .impactList li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid #3b3b99; /* Indigo-colored border */
+  }

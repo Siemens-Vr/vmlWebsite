@@ -1,0 +1,101 @@
+.aboutTeams {
+    background: #f5f5f5;
+    padding: 2rem;
+  }
+  
+  .departmentTitle {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .membersGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .memberCard {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: default;
+  }
+  
+  .memberCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .memberCard.expanded {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .memberImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 5px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .memberName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .memberPosition {
+    font-style: italic;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .memberDescription {
+    font-size: 0.95rem;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .readMoreBtn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 999px;
+    border: 2px solid #3b82f6;
+    background-color: transparent;
+    color: #3b82f6;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .readMoreBtn:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .readMoreBtn.active {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+  }
+  
+  .notFoundMessage {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #dc2626;
+    padding: 2rem;
+  }
+  

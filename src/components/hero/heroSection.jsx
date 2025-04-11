@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./heroSection.module.css";
 import image1 from "../../assets/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg";
-import Team from "../team/team";
-// import team from "../team/team";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,15 +13,14 @@ const teamMembers = [
 ];
 
 const TeamCarousel = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState(null);
+  const navigate = useNavigate()
 
-
-  const handleclick= (name) =>{
-    console.log(name)
-    setSelectedDepartment(name); // ✅ Set department to pass as prop
-  }
+  const handleClick = (name) => {
+    navigate("/about-teams", { state: { departmentName: name } });
+  };
 
   return (
+    <>
     <div className="carousel-container">
       <h2>
         Meet our <span className="highlight">Talented</span> team members
@@ -33,7 +31,7 @@ const TeamCarousel = () => {
           <div
             key={index}
             className="team-card"
-            onClick={() => handleclick(member.name)}
+            onClick={() => handleClick(member.name)}
           >
             <img src={member.image} alt={member.name} />
             <p>{member.name}</p>
@@ -42,8 +40,9 @@ const TeamCarousel = () => {
       </div>
 
 
-{selectedDepartment && <Team name={selectedDepartment} />}
     </div>
+
+    </>
   );
 };
 
@@ -179,6 +178,88 @@ const Hero = ({ page }) => {
       </div>
     </div>
     )}
+
+{page === "ai" && (
+  <div className={styles.aiHeroContainer}>
+    {/* Left Text Section */}
+    <div className={styles.aiText}>
+      <h1>
+        <span className={styles.aiPurple}>Artificial</span> <br />
+        <span className={styles.aiBlack}>Intelligence</span>
+      </h1>
+      <p className={styles.aiDescription}>
+        Bridging the gap between physical limitations and mechatronics facilities, we make advanced engineering accessible through immersive virtual experiences
+      </p>
+    </div>
+
+    {/* Right White Box Placeholder */}
+    <div className={styles.aiImagePlaceholder}></div>
+  </div>
+)}
+
+{page === "ar" && (
+  <div className={styles.aiHeroContainer}>
+    {/* Left Text Section */}
+    <div className={styles.aiText}>
+      <h1>
+        <span className={styles.aiPurple}>Augmented</span> <br />
+        <span className={styles.aiBlack}>Reality</span>
+      </h1>
+      <p className={styles.aiDescription}>
+        Bridging the gap between physical limitations and mechatronics facilities, we make advanced engineering accessible through immersive virtual experiences
+      </p>
+    </div>
+
+    {/* Right White Box Placeholder */}
+    <div className={styles.aiImagePlaceholder}></div>
+  </div>
+)}
+
+{page === "vr" && (
+  <div className={styles.aiHeroContainer}>
+    {/* Left Text Section */}
+    <div className={styles.aiText}>
+      <h1>
+        <span className={styles.aiPurple}>Virtual</span> <br />
+        <span className={styles.aiBlack}>Reality</span>
+      </h1>
+      <p className={styles.aiDescription}>
+        Bridging the gap between physical limitations and mechatronics facilities, we make advanced engineering accessible through immersive virtual experiences
+      </p>
+    </div>
+
+    {/* Right White Box Placeholder */}
+    <div className={styles.aiImagePlaceholder}></div>
+  </div>
+)}
+
+{page === "prosthetics" && (
+  <div className={styles.aiHeroContainer}>
+    {/* Left Text Section */}
+    <div className={styles.aiText}>
+      <h1>
+        <span className={styles.aiPurple}>Prosthetics</span> <br />
+        <span className={styles.aiBlack}>And Orthotics</span>
+      </h1>
+      <p className={styles.aiDescription}>
+        Bridging the gap between physical limitations and mechatronics facilities, we make advanced engineering accessible through immersive virtual experiences
+      </p>
+    </div>
+
+    {/* Right White Box Placeholder */}
+    <div className={styles.aiImagePlaceholder}></div>
+  </div>
+)}
+
+{page === "newsletters" && (
+  <div className={styles.newsletterHero}>
+    <h1 className={styles.newsletterTitle}>
+      Virtual Mechatronics labs <br />
+      <span className={styles.newsletterSubtitle}>Newsletters</span>
+    </h1>
+  </div>
+)}
+
     </section>
   );
 };
