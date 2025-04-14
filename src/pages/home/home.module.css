@@ -1,4 +1,4 @@
-/* Home.module.css */
+
 
 .container {
     width: 100%;
@@ -22,11 +22,19 @@
   }
   
   /* About Sections */
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+   
+  }
   .aboutSection {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 10%;
+    border-radius: 50px 50px 50px 50px;
   }
   
   .contentWrapper,
@@ -38,8 +46,32 @@
   }
   
   .contentWrapperReverse {
-    flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row; /* Ensures text is on the left, image on the right */
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap; /* helps on smaller screens */
   }
+  
+  .textContainer {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  
   
   /* .imageContainer {
     flex: 1;
@@ -52,7 +84,7 @@
     height: 550px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid blue;
+    border: 4px solid rgb(210, 210, 231);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     margin-left: 2rem;
     flex: 1;
@@ -61,24 +93,71 @@
   }
   
   .image {
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   
   .textContainer {
     flex: 1;
+    width: 50%;
   }
   
   .textContainer h2 {
     font-size: 1.8rem;
     font-weight: bold;
     color: #222;
+    text-align: justify;
   }
   
+  .sectionDivider {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .sectionDivider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    z-index: 1;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid rgb(241, 241, 241);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .circle img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+  }
+  
+  
+
   .textContainer p {
     font-size: 1rem;
     color: #444;
     line-height: 1.6;
+    text-align: justify;
   }
   
   .list {
@@ -91,11 +170,12 @@
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px;
+    text-align: justify;
   }
   
   .readMore {
     display: inline-block;
-    background: #2c2c6c;
+    background: #2121e9;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -103,6 +183,7 @@
     margin-top: 15px;
     cursor: pointer;
     transition: background 0.3s ease;
+    justify-content: start;
   }
   
   .readMore:hover {

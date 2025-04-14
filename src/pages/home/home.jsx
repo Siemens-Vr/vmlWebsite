@@ -107,10 +107,10 @@ const Home = () => {
           <section className={styles.aboutSection}>
         <div className={styles.contentWrapper}>
           <div className={styles.imageContainer}>
-            {/* <Image src="/images/mechatronics.jpg" alt="Mechatronics" width={400} height={400} className={styles.image} /> */}
+            <img src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg.jpg" alt="Mechatronics" width={400} height={400} className={styles.image} />
           </div>
           <div className={styles.textContainer}>
-            <h2>About Virtual Mechatronics Lab</h2>
+            <h2>Virtual Mechatronics Lab</h2>
             <p>
               Our lab leverages the latest technologies to create highly detailed and interactive simulations of mechatronic systems. This innovative approach significantly enhabces the design, development and deployment processes
               resulting in more efficient, effective, and groundbreaking solutions in the field of mechatronics innovation.
@@ -120,6 +120,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className={styles.sectionDivider}>
+  <span className={styles.circle}>
+    <img src="/images/dot.jpeg" alt="Divider Icon" />
+  </span>
+</div>
 
       {/* About Virtual Reality */}
       <section className={styles.aboutSection}>
@@ -138,11 +144,12 @@ const Home = () => {
             <button className={styles.readMore}>Read More</button>
           </div>
           <div className={styles.imageContainer}>
-            {/* <Image src="/images/vr.jpg" alt="Virtual Reality" width={400} height={400} className={styles.image} /> */}
+            <img src="/images/vr.jpg" alt="Virtual Reality"  className={styles.image} />
           </div>
         </div>
       </section>
 
+     
       {/*Why choose us*/}
     <section className={styles.chooseUs}>
         <div >
@@ -161,6 +168,7 @@ const Home = () => {
           </div>
         </div>
     </section>
+
 
   {/* Ongoing Projects */}
   <section className={styles.projectsSection}>
@@ -198,6 +206,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+      <div className={styles.sectionDivider}>
+</div>
 
         {/* Testimonial Section */}
         <TestimonialSection />

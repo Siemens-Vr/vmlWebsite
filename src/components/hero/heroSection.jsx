@@ -18,6 +18,7 @@ const TeamCarousel = () => {
   const handleClick = (name) => {
     navigate("/about-teams", { state: { departmentName: name } });
   };
+  
 
   return (
     <>
@@ -49,10 +50,14 @@ const TeamCarousel = () => {
 
 const Hero = ({ page }) => {
   const [timeLeft, setTimeLeft] = useState("00:00:00");
+  const navigate = useNavigate();
 
-  // Function to calculate the countdown time
+  const handleApplication = () => {
+    window.open("https://siemensdekut.dkut.ac.ke", "_blank");
+  };
+
   useEffect(() => {
-    const targetDate = new Date("2025-04-30T23:59:59"); // Adjust the date as needed
+    const targetDate = new Date("2025-04-30T23:59:59");
     const interval = setInterval(() => {
       const now = new Date();
       const difference = targetDate - now;
@@ -76,23 +81,30 @@ const Hero = ({ page }) => {
     <section className={styles.heroSection}>
       {page === "home" && (
         <>
-          {/* Left Section */}
           <div className={styles.leftSection}>
             <h1 className={styles.title}>Virtual Mechatronics Lab</h1>
             <p className={styles.subtitle}>Revolutionizing Education In Africa</p>
             <p className={styles.description}>
               Welcome to the{" "}
-              <a href="https://siemensdekut.dkut.ac.ke/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <a
+                href="https://siemensdekut.dkut.ac.ke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
                 Siemens Mechatronics
               </a>{" "}
               <br />
-              <a href="https://siemensdekut.dkut.ac.ke/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <a
+                href="https://siemensdekut.dkut.ac.ke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
                 Certification Centre
               </a>{" "}
               in Africa
             </p>
-
-            {/* Countdown */}
             <p className={styles.countdown}>SMCPC intake ongoing. Closes in:</p>
             <div className={styles.countdownBoxes}>
               {timeLeft.split(":").map((unit, index) => (
@@ -101,23 +113,31 @@ const Hero = ({ page }) => {
                 </div>
               ))}
             </div>
-
-            {/* Buttons */}
             <div className={styles.buttons}>
-              <button className={styles.applyButton}>Apply</button>
+              <button className={styles.applyButton} onClick={handleApplication}>
+                Apply
+              </button>
               <button className={styles.detailsButton}>More Details</button>
             </div>
           </div>
 
-          {/* Right Section - Image */}
           <div className={styles.rightSection}>
-            <div className={styles.imageContainer}>
-              <img src="/images/robotic-lab.png" alt="Robotic Lab" className={styles.heroImage} />
+            <div className={styles.overlapContainer}>
+              <div className={styles.circleBottom}></div>
+              <div className={styles.circleTop}>
+                <video
+                  src="/images/background2.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  alt="Robotic Lab"
+                  className={styles.heroImage}
+                />
+              </div>
             </div>
           </div>
         </>
       )}
-
       {page === "about" && (
         <section className={styles.aboutSection}>
         <div className={styles.contentContainer}>
