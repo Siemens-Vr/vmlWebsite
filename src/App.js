@@ -5,16 +5,17 @@ import Footer from "./components/Footer/footer";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about_VML/about";
 import HeroSection from "../src/components/hero/heroSection";
-import AboutTeamPage from "./pages/about_teams/AboutTeam"
-import Worldskill from "./pages/Worldskills/worldskill"
-import Sifa from "./pages/sifa/sifa"
-import Blogs from "./pages/Media/Blogs/blogs"
-import Confrence from "./pages/Media/Confrence/confrence"
-import Newsletter from "./pages/Media/Newsletter/news"
-import AI from "./pages/Projects/AI/AI"
-import AR from "./pages/Projects/AR/AR"
-import VR from "./pages/Projects/VR/VR"
-import Prosthetics from "./pages/Projects/Prosthetics/Prosthetics"
+import AboutTeamPage from "./pages/about_teams/AboutTeam";
+import Worldskill from "./pages/Worldskills/worldskill";
+import Sifa from "./pages/sifa/sifa";
+import Blogs from "./pages/Media/Blogs/blogs";
+import Confrence from "./pages/Media/Confrence/confrence";
+import Newsletter from "./pages/Media/Newsletter/news";
+import AI from "./pages/Projects/AI/AI";
+import AR from "./pages/Projects/AR/AR";
+import VR from "./pages/Projects/VR/VR";
+import Prosthetics from "./pages/Projects/Prosthetics/Prosthetics";
+import Partners from "./components/partners/partners";
 
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
         <Route path="/Prosthetics/Prosthetics" element={<Prosthetics />} />
       </Routes>
 
-     
+     <Partners />
       <Footer />
       </Router>
     </div>

@@ -104,19 +104,26 @@ const Home = () => {
       {/* Hero Section */}
       <Hero page="home" />
 
+   
+
           {/* About Virtual Mechatronics Lab */}
           <section className={styles.aboutSection}>
         <div className={styles.contentWrapper}>
         <div className={styles.overlapContainer}>
         <div className={styles.circleBottom}></div>
         <div className={styles.circleTop}>
-        <img src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg" alt="Mechatronics" className={styles.image} />
-          </div>
+        <img
+          src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg"
+          alt="Mechatronics"
+          className={styles.image}
+        />
+        <div className={styles.smallCircle}></div> 
+      </div>
           </div>
           <div className={styles.textContainer}>
-            <h2>Virtual Mechatronics Lab</h2>
+            <h2>Virtual Mechatronics Labs</h2>
             <p>
-              Our lab leverages the latest technologies to create highly detailed and interactive simulations of mechatronic systems. This innovative approach significantly enhabces the design, development and deployment processes
+              Our labs leverages the latest technologies to create highly detailed and interactive simulations of mechatronic systems. This innovative approach significantly enhabces the design, development and deployment processes
               resulting in more efficient, effective, and groundbreaking solutions in the field of mechatronics innovation.
             </p>
             <p>The lab embodies the cutting edge of technological integration, pushing the boundaries of what is possible in mechatronic system design and Integration of Virtual Reality and Digital Technologies</p>
@@ -124,7 +131,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <div className={styles.rightSemiCircle}>
+        <div className={styles.semiCircle}></div>
+      </div>
       <div className={styles.sectionDivider}>
   <span className={styles.circle}>
     <img src="/images/dot.jpeg" alt="Divider Icon" />
@@ -133,22 +142,31 @@ const Home = () => {
 
       {/* About Virtual Reality */}
       <section className={styles.aboutSection}>
+      <div className={styles.rightSemiCircle1}>
+        <div className={styles.semiCircle1}></div>
+      </div>
         <div className={styles.contentWrapperReverse}>
+          
           <div className={styles.textContainer}>
             <h2>About Virtual Reality</h2>
             <p>
-              Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds...
+              Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds. 
+              Explore and interact with 3D worlds through advanced simulations, 
+              opening new possibilities for education, entertainment, and innovation.
             </p>
-            <ul className={styles.list}>
-              <li>✅ Accessibility for students</li>
-              <li>✅ Enhance STEM Education</li>
-              <li>✅ Enhanced Training</li>
-              <li>✅ Personalized Learning</li>
-            </ul>
+            <p> In education, VR enhances accessibility by allowing students to participate remotely and interactively. It makes STEM subjects more engaging through virtual experiments, while providing safe, realistic training scenarios for hands-on learning. Additionally, VR supports personalized learning by adapting content to each student's pace and needs, promoting better understanding and retention.</p>
             <button className={styles.readMore}>Read More</button>
           </div>
-          <div className={styles.imageContainer}>
-            <img src="/images/vr.jpg" alt="Virtual Reality"  className={styles.image} />
+          <div className={styles.overlapContainer}>
+        <div className={styles.circleBottom1}></div>
+        <div className={styles.circleTop1}>
+        <img
+          src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg"
+          alt="Mechatronics"
+          className={styles.image}
+        />
+        <div className={styles.smallCircle1}></div> 
+      </div>
           </div>
         </div>
       </section>
@@ -168,8 +186,17 @@ const Home = () => {
             </ol>
           </div>
           <div className={styles.contentWrapperReversed}>
-
+          <div className={styles.imageWrapper}>
+            <img
+              src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg"
+              alt="Mechatronics"
+              className={styles.images}
+            />
+            <div className={styles.rectangleOne}></div>
+            <div className={styles.rectangleTwo}></div>
           </div>
+        </div>
+
         </div>
     </section>
 
@@ -180,26 +207,35 @@ const Home = () => {
           <h1 className={styles.heading}>Ongoing Projects</h1>
           <h2 className={styles.subHeading}>Explore Our Recent Projects</h2>
           <div className={styles.projectsContainer}>
-            <div className={styles.projectCard}>
-              {/* <div className={styles.imageOverlay} style={{ backgroundImage: url('/images/prosthetics.jpg') }}></div> */}
-              <div className={styles.textprojectContainer}>
-                <h3>Prosthetics</h3>
-                <p>
-                  Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds.
-                </p>
-              </div>
+          <div className={styles.projectCard}>
+            <div
+              className={styles.imageOverlay}
+              style={{
+                backgroundImage: `linear-gradient(to left, rgba(30, 30, 110, 1), rgba(30, 30, 110, 0)), url('/images/prosthetics.png')`,
+              }}
+            ></div>
+            <div className={styles.textprojectContainer}>
+              <h3>Prosthetics</h3>
+              <p>
+                Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds.
+              </p>
             </div>
+          </div>
             <div className={styles.projectCard}>
-              {/* <div className={styles.imageOverlay} style={{ backgroundImage: url('/images/virtual-reality.jpg') }}></div> */}
               <div className={styles.textprojectContainer}>
                 <h3>Virtual Reality</h3>
                 <p>
                   Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds.
                 </p>
               </div>
+              <div className={styles.imageOverlay} style={{
+                backgroundImage: `linear-gradient(to left, rgba(30, 30, 110, 1), rgba(30, 30, 110, 0)), url('/images/IMG-20240519-WA0010.jpg')`,
+              }}></div>
             </div>
             <div className={styles.projectCard}>
-              {/* <div className={styles.imageOverlay} style={{ backgroundImage: url('/images/augmented-reality.jpg') }}></div> */}
+            <div className={styles.imageOverlay} style={{
+                backgroundImage: `linear-gradient(to left, rgba(30, 30, 110, 1), rgba(30, 30, 110, 0)), url('/images/vr.png')`,
+              }}></div>
               <div className={styles.textprojectContainer}>
                 <h3>Augmented Reality</h3>
                 <p>
@@ -265,14 +301,14 @@ const Home = () => {
 </section> */}
 
 {/* Patners */}
-<section className={styles.partnersSection}>
+{/* <section className={styles.partnersSection}>
   <h1 className={styles.partnersTitle}>Partners</h1>
   <p className={styles.partnersDescription}>
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
     when an unknown printer took a galley of type and scrambled it.
   </p>
 
-  {/* Partners Logos Carousel */}
+
   <div className={styles.partnersCarousel}>
     <button className={styles.carouselButtonLeft}>&lt;</button>
     
@@ -285,7 +321,7 @@ const Home = () => {
 
     <button className={styles.carouselButtonRight}>&gt;</button>
   </div>
-</section>
+</section> */}
     </div>
   );
 };
