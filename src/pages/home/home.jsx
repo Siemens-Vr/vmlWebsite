@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import styles from './home.module.css';
-import Hero from "../../components/hero/heroSection"; // Ensure correct file name
+import Hero from "../../components/hero/heroSection"; 
+
 
 const testimonials = [
   {
@@ -106,8 +107,11 @@ const Home = () => {
           {/* About Virtual Mechatronics Lab */}
           <section className={styles.aboutSection}>
         <div className={styles.contentWrapper}>
-          <div className={styles.imageContainer}>
-            <img src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg.jpg" alt="Mechatronics" width={400} height={400} className={styles.image} />
+        <div className={styles.overlapContainer}>
+        <div className={styles.circleBottom}></div>
+        <div className={styles.circleTop}>
+        <img src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg" alt="Mechatronics" className={styles.image} />
+          </div>
           </div>
           <div className={styles.textContainer}>
             <h2>Virtual Mechatronics Lab</h2>
