@@ -624,3 +624,9 @@ h2 {
     width: 100%;
   }
 }
+
+@media (max-width: 1024px) {
+  .rightSection{
+    display: none;
+  }
+}

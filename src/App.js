@@ -4,7 +4,6 @@ import Navbar from "../src/components/navbar/navbar";
 import Footer from "./components/Footer/footer";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about_VML/about";
-import HeroSection from "../src/components/hero/heroSection";
 import AboutTeamPage from "./pages/about_teams/AboutTeam";
 import Worldskill from "./pages/Worldskills/worldskill";
 import Sifa from "./pages/sifa/sifa";
@@ -22,9 +21,7 @@ export default function Home() {
   return (
     <div>
        <Router>
-      <Navbar />
-      {/* <HeroSection /> */}
-    
+      <Navbar />    
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about-vml" element={<AboutPage />} />
@@ -39,7 +36,6 @@ export default function Home() {
         <Route path="/VR/VR" element={<VR />} />
         <Route path="/Prosthetics/Prosthetics" element={<Prosthetics />} />
       </Routes>
-
      <Partners />
       <Footer />
       </Router>

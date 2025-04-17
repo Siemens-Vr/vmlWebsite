@@ -1,103 +1,115 @@
-import React, { useState, useRef, useEffect } from "react";
-import styles from "../../pages/home/home.module.css";
+import React, { useState } from 'react';
+import styles from './testimonial.module.css';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const testimonials = [
   {
-    text: "Virtual Mechatronics Lab has transformed how we teach automation and robotics.",
+    text: "The virtual mechatronics lab transformed how our students interact with practical content. Brilliant innovation!",
     name: "John Doe",
-    position: "Professor of Engineering",
-    avatar: "/images/avatar1.jpg",
+    position: "Engineering Professor",
+    avatar: "/images/dot.jpeg"
   },
   {
-    text: "The immersive simulations make learning incredibly engaging!",
+    text: "An excellent platform. The hands-on simulations are top-notch! We’ve been able to reach more learners remotely than ever before.",
     name: "Jane Smith",
-    position: "Mechatronics Student",
-    avatar: "/images/avatar2.jpg",
+    position: "STEM Program Coordinator",
+    avatar: "/images/vr.png"
   },
   {
-    text: "A game-changer for industrial training in Africa.",
-    name: "Dr. Williams",
-    position: "Industry Expert",
-    avatar: "/images/avatar3.jpg",
+    text: "We’ve been able to reach more learners remotely than ever before. Amazing tool!",
+    name: "Ahmed Ali",
+    position: "Technical Lead, EduTech",
+    avatar:  "/images/dot.jpeg"
   },
+  {
+    text: "An excellent platform. The hands-on simulations are top-notch! We’ve been able to reach more learners remotely than ever before.",
+    name: "Jane Smith",
+    position: "STEM Program Coordinator",
+    avatar: "/images/vr.png"
+  }
 ];
 
-const TestimonialSection = () => {
+const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-    const observerRef = useRef(null);
-  
-    useEffect(() => {
-      observerRef.current = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const newIndex = testimonials.findIndex(
-                (t) => t.text === entry.target.dataset.text
-              );
-              if (newIndex !== -1) {
-                setActiveIndex(newIndex);
-              }
-            }
-          });
-        },
-        { threshold: 0.6 }
-      );
-  
-      const elements = document.querySelectorAll(`.${styles.testimonialCard}`);
-      elements.forEach((el) => observerRef.current.observe(el));
-  
-      return () => observerRef.current.disconnect();
-    }, []);
   const handleSelect = (index) => {
     setActiveIndex(index);
   };
 
+  const goPrevious = () => {
+    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % testimonials.length);
+  };
   return (
-    <div className="flex flex-col md:flex-row gap-6 items-center justify-center px-6 py-12">
-      {/* Left: Big active testimonial */}
-      <div className="w-full md:w-2/3 p-6 rounded-2xl shadow-lg bg-white">
-        <p className="text-xl italic text-gray-700 mb-4">"{testimonials[activeIndex].text}"</p>
-        <div className="flex items-center gap-4">
-          <img
-            src={testimonials[activeIndex].avatar}
-            alt={testimonials[activeIndex].name}
-            className="w-14 h-14 rounded-full object-cover"
-          />
-          <div>
-            <p className="font-bold">{testimonials[activeIndex].name}</p>
-            <p className="text-sm text-gray-500">{testimonials[activeIndex].position}</p>
+    <section className={styles.testimonialsSection}>
+    <h1 className={styles.testimonialTitle}>Testimonials</h1>
+    <h2 className={styles.testimonialHeading}>What Our Clients Say</h2>
+    <p className={styles.testimonialDescription}>
+      The virtual mechatronics lab has had the great pleasure of working with
+      organisations and individuals around the world. Here are the words they have to say.
+    </p>
+
+    <div className={styles.testimonialWrapper}>
+      {/* Left: Active Testimonial */}
+      <div className={styles.activeSection}>
+        <button className={styles.navButton} onClick={goPrevious}>
+          {/* <FaArrowLeft /> */}
+        </button>
+        <div className={styles.activeTestimonial}>
+          <p className={styles.testimonialText}>
+            "{testimonials[activeIndex].text}"
+          </p>
+          <div className={styles.testimonialInfo}>
+            <img
+              src={testimonials[activeIndex].avatar}
+              alt={testimonials[activeIndex].name}
+              className={styles.avatar}
+            />
+            <div>
+              <p className={styles.testimonialName}>{testimonials[activeIndex].name}</p>
+              <p className={styles.testimonialPosition}>{testimonials[activeIndex].position}</p>
+            </div>
           </div>
         </div>
+        <button className={styles.navButton} onClick={goNext}>
+          {/* <FaArrowRight /> */}
+        </button>
       </div>
 
-      {/* Right: Small testimonials */}
-      <div className="flex md:flex-col gap-4 w-full md:w-1/3">
+      {/* Divider */}
+      <div className={styles.divider}></div>
+
+      {/* Right: Other Testimonials */}
+      <div className={styles.sideTestimonials}>
         {testimonials.map((testimonial, index) => (
           index !== activeIndex && (
             <div
               key={index}
               onClick={() => handleSelect(index)}
-              className="cursor-pointer bg-gray-100 p-4 rounded-xl shadow-md hover:bg-gray-200 transition duration-300"
+              className={styles.sideCard}
             >
-              <div className="flex items-center gap-3">
+              <div className={styles.sideInfo}>
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-10 h-10 rounded-full object-cover"
+                  className={styles.sideAvatar}
                 />
                 <div>
-                  <p className="text-sm font-semibold">{testimonial.name}</p>
-                  <p className="text-xs text-gray-500">{testimonial.position}</p>
+                  <p className={styles.sideName}>{testimonial.name}</p>
+                  <p className={styles.sidePosition}>{testimonial.position}</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-600 mt-2 truncate">"{testimonial.text}"</p>
+              <p className={styles.sideText}>"{testimonial.text}"</p>
             </div>
           )
         ))}
       </div>
     </div>
-  );
+  </section>
+);
 };
 
-export default TestimonialSection;
+export default Testimonials;

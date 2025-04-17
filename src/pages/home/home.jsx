@@ -3,99 +3,108 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from './home.module.css';
 import Hero from "../../components/hero/heroSection"; 
+import CountUp from 'react-countup';
+import { FaUsers, FaProjectDiagram } from 'react-icons/fa'; 
+import TestimonialSection from "../../components/caurosel/testimonial";
 
 
-const testimonials = [
-  {
-    text: "Virtual Mechatronics Lab has transformed how we teach automation and robotics.",
-    name: "John Doe",
-    position: "Professor of Engineering",
-    avatar: "/images/avatar1.jpg",
-  },
-  {
-    text: "The immersive simulations make learning incredibly engaging!",
-    name: "Jane Smith",
-    position: "Mechatronics Student",
-    avatar: "/images/avatar2.jpg",
-  },
-  {
-    text: "A game-changer for industrial training in Africa.",
-    name: "Dr. Williams",
-    position: "Industry Expert",
-    avatar: "/images/avatar3.jpg",
-  },
-];
+// const testimonials = [
+//   {
+//     text: "Virtual Mechatronics Lab has transformed how we teach automation and robotics.",
+//     name: "John Doe",
+//     position: "Professor of Engineering",
+//     avatar: "/images/avatar1.jpg",
+//   },
+//   {
+//     text: "The immersive simulations make learning incredibly engaging!",
+//     name: "Jane Smith",
+//     position: "Mechatronics Student",
+//     avatar: "/images/avatar2.jpg",
+//   },
+//   {
+//     text: "The immersive simulations make learning incredibly engaging!",
+//     name: "Jane Smith",
+//     position: "Mechatronics Student",
+//     avatar: "/images/avatar2.jpg",
+//   },
+//   {
+//     text: "A game-changer for industrial training in Africa.",
+//     name: "Dr. Williams",
+//     position: "Industry Expert",
+//     avatar: "/images/avatar3.jpg",
+//   },
+// ];
 
-const TestimonialSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const observerRef = useRef(null);
+// const TestimonialSection = () => {
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const observerRef = useRef(null);
 
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const newIndex = testimonials.findIndex(
-              (t) => t.text === entry.target.dataset.text
-            );
-            if (newIndex !== -1) {
-              setActiveIndex(newIndex);
-            }
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
+//   useEffect(() => {
+//     observerRef.current = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             const newIndex = testimonials.findIndex(
+//               (t) => t.text === entry.target.dataset.text
+//             );
+//             if (newIndex !== -1) {
+//               setActiveIndex(newIndex);
+//             }
+//           }
+//         });
+//       },
+//       { threshold: 0.6 }
+//     );
 
-    const elements = document.querySelectorAll(`.${styles.testimonialCard}`);
-    elements.forEach((el) => observerRef.current.observe(el));
+//     const elements = document.querySelectorAll(`.${styles.testimonialCard}`);
+//     elements.forEach((el) => observerRef.current.observe(el));
 
-    return () => observerRef.current.disconnect();
-  }, []);
+//     return () => observerRef.current.disconnect();
+//   }, []);
 
-  return (
-    <section className={styles.testimonialSection}>
-      <h1 className={styles.testimonialTitle}>Testimonial</h1>
-      <h2 className={styles.testimonialHeading}>What Our Clients Say</h2>
-      <p className={styles.testimonialDescription}>
-        The virtual mechatronics lab has had the great pleasure of working with 
-        organisations and individuals around the world. Here are the words they have to say.
-      </p>
+//   return (
+//     <section className={styles.testimonialSection}>
+//       <h1 className={styles.testimonialTitle}>Testimonial</h1>
+//       <h2 className={styles.testimonialHeading}>What Our Clients Say</h2>
+//       <p className={styles.testimonialDescription}>
+//         The virtual mechatronics lab has had the great pleasure of working with 
+//         organisations and individuals around the world. Here are the words they have to say.
+//       </p>
 
-      <div className={styles.testimonialWrapper}>
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className={`${styles.testimonialCard} ${
-              index === activeIndex ? styles.active : styles.small
-            }`}
-            data-text={testimonial.text}
-          >
-            <span className={styles.quoteIcon}>❝</span>
-            <p className={styles.testimonialText}>{testimonial.text}</p>
-            <div className={styles.clientInfo}>
-              <img src={testimonial.avatar} alt={testimonial.name} className={styles.clientAvatar} />
-              <div>
-                <h3 className={styles.clientName}>{testimonial.name}</h3>
-                <p className={styles.clientPosition}>{testimonial.position}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+//       <div className={styles.testimonialWrapper}>
+//         {testimonials.map((testimonial, index) => (
+//           <div
+//             key={index}
+//             className={`${styles.testimonialCard} ${
+//               index === activeIndex ? styles.active : styles.small
+//             }`}
+//             data-text={testimonial.text}
+//           >
+//             <span className={styles.quoteIcon}>❝</span>
+//             <p className={styles.testimonialText}>{testimonial.text}</p>
+//             <div className={styles.clientInfo}>
+//               <img src={testimonial.avatar} alt={testimonial.name} className={styles.clientAvatar} />
+//               <div>
+//                 <h3 className={styles.clientName}>{testimonial.name}</h3>
+//                 <p className={styles.clientPosition}>{testimonial.position}</p>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
 
-      {/* Pagination Dots */}
-      <div className={styles.pagination}>
-        {testimonials.map((_, index) => (
-          <span
-            key={index}
-            className={index === activeIndex ? styles.dotActive : styles.dot}
-          ></span>
-        ))}
-      </div>
-    </section>
-  );
-};
+//       {/* Pagination Dots */}
+//       <div className={styles.pagination}>
+//         {testimonials.map((_, index) => (
+//           <span
+//             key={index}
+//             className={index === activeIndex ? styles.dotActive : styles.dot}
+//           ></span>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
 
 
 const Home = () => {
@@ -120,6 +129,7 @@ const Home = () => {
         <div className={styles.smallCircle}></div> 
       </div>
           </div>
+          <>
           <div className={styles.textContainer}>
             <h2>Virtual Mechatronics Labs</h2>
             <p>
@@ -129,7 +139,9 @@ const Home = () => {
             <p>The lab embodies the cutting edge of technological integration, pushing the boundaries of what is possible in mechatronic system design and Integration of Virtual Reality and Digital Technologies</p>
             <button className={styles.readMore}>Read More</button>
           </div>
+          </>
         </div>
+        
       </section>
       <div className={styles.rightSemiCircle}>
         <div className={styles.semiCircle}></div>
@@ -174,9 +186,10 @@ const Home = () => {
      
       {/*Why choose us*/}
     <section className={styles.chooseUs}>
-        <div >
+        <div className="text-center">
+      <h1 className={styles.headings}>Why Choose Us</h1>
           <div className={styles.textContainer}>
-            <h1>Why Choose Us</h1>
+            
             <h2>Experience Mechatronics Excellence</h2>
             <p className={styles.paraChoose}>We specialize in virtual mechatronics, combining VR, robotics, and automation to deliver seamless experiences and optimized solutions. Partner with us to transform your processes and drive your business into the future.</p>
             <ol className={styles.lists}>
@@ -188,12 +201,27 @@ const Home = () => {
           <div className={styles.contentWrapperReversed}>
           <div className={styles.imageWrapper}>
             <img
-              src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg"
+              src="/images/VR-Machine-assembling.jpeg"
               alt="Mechatronics"
               className={styles.images}
             />
-            <div className={styles.rectangleOne}></div>
-            <div className={styles.rectangleTwo}></div>
+            <div className={styles.statsContainer}>
+      <div className={styles.rectangleOne}>
+        <FaUsers className={styles.icon} />
+        <h2 className={styles.h2}>
+          <CountUp start={1} end={9999} duration={10} delay={1.0} suffix=" +"/>
+        </h2>
+        <p className={styles.p}>Happy Students</p>
+      </div>
+
+      <div className={styles.rectangleTwo}>
+        <FaProjectDiagram className={styles.icon} />
+        <h2 className={styles.h2}>
+        <CountUp start={1} end={9999} duration={10} delay={1.0} suffix=" +"/>
+        </h2>
+        <p className={styles.p} >Projects Completed</p>
+      </div>
+    </div>
           </div>
         </div>
 
@@ -211,7 +239,7 @@ const Home = () => {
             <div
               className={styles.imageOverlay}
               style={{
-                backgroundImage: `linear-gradient(to left, rgba(30, 30, 110, 1), rgba(30, 30, 110, 0)), url('/images/prosthetics.png')`,
+                backgroundImage: `linear-gradient(to left, rgba(38, 34, 98), rgba(30, 30, 110, 0)), url('/images/prosthetics.png')`,
               }}
             ></div>
             <div className={styles.textprojectContainer}>
@@ -221,20 +249,20 @@ const Home = () => {
               </p>
             </div>
           </div>
-            <div className={styles.projectCard}>
-              <div className={styles.textprojectContainer}>
-                <h3>Virtual Reality</h3>
-                <p>
-                  Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds.
-                </p>
-              </div>
-              <div className={styles.imageOverlay} style={{
-                backgroundImage: `linear-gradient(to left, rgba(30, 30, 110, 1), rgba(30, 30, 110, 0)), url('/images/IMG-20240519-WA0010.jpg')`,
-              }}></div>
+          <div className={`${styles.projectCard} ${styles.reverse}`}>
+            <div className={styles.imageOverlay} style={{
+              backgroundImage: `linear-gradient(to right, rgba(38, 34, 98), rgba(30, 30, 110, 0)), url('/images/IMG-20240519-WA0010.jpg')`,
+            }}></div>
+            <div className={styles.textprojectContainer}>
+              <h3>Virtual Reality</h3>
+              <p>
+                Virtual Reality immerses you in computer-generated environments, seamlessly blending the physical and digital worlds.
+              </p>
             </div>
+          </div>
             <div className={styles.projectCard}>
             <div className={styles.imageOverlay} style={{
-                backgroundImage: `linear-gradient(to left, rgba(30, 30, 110, 1), rgba(30, 30, 110, 0)), url('/images/vr.png')`,
+                backgroundImage: `linear-gradient(to left, rgba(38, 34, 98), rgba(30, 30, 110, 0)), url('/images/vr.png')`,
               }}></div>
               <div className={styles.textprojectContainer}>
                 <h3>Augmented Reality</h3>
@@ -246,7 +274,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* <div className={styles.rightSemiCircle2}>
+        <div className={styles.semiCircle2}></div>
+      </div> */}
 
       <div className={styles.sectionDivider}>
 </div>
@@ -300,28 +330,6 @@ const Home = () => {
   </div>
 </section> */}
 
-{/* Patners */}
-{/* <section className={styles.partnersSection}>
-  <h1 className={styles.partnersTitle}>Partners</h1>
-  <p className={styles.partnersDescription}>
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it.
-  </p>
-
-
-  <div className={styles.partnersCarousel}>
-    <button className={styles.carouselButtonLeft}>&lt;</button>
-    
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-
-    <button className={styles.carouselButtonRight}>&gt;</button>
-  </div>
-</section> */}
     </div>
   );
 };
