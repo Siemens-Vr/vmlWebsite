@@ -7,106 +7,32 @@ import CountUp from 'react-countup';
 import { FaUsers, FaProjectDiagram } from 'react-icons/fa'; 
 import TestimonialSection from "../../components/caurosel/testimonial";
 
-
-// const testimonials = [
-//   {
-//     text: "Virtual Mechatronics Lab has transformed how we teach automation and robotics.",
-//     name: "John Doe",
-//     position: "Professor of Engineering",
-//     avatar: "/images/avatar1.jpg",
-//   },
-//   {
-//     text: "The immersive simulations make learning incredibly engaging!",
-//     name: "Jane Smith",
-//     position: "Mechatronics Student",
-//     avatar: "/images/avatar2.jpg",
-//   },
-//   {
-//     text: "The immersive simulations make learning incredibly engaging!",
-//     name: "Jane Smith",
-//     position: "Mechatronics Student",
-//     avatar: "/images/avatar2.jpg",
-//   },
-//   {
-//     text: "A game-changer for industrial training in Africa.",
-//     name: "Dr. Williams",
-//     position: "Industry Expert",
-//     avatar: "/images/avatar3.jpg",
-//   },
-// ];
-
-// const TestimonialSection = () => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const observerRef = useRef(null);
-
-//   useEffect(() => {
-//     observerRef.current = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             const newIndex = testimonials.findIndex(
-//               (t) => t.text === entry.target.dataset.text
-//             );
-//             if (newIndex !== -1) {
-//               setActiveIndex(newIndex);
-//             }
-//           }
-//         });
-//       },
-//       { threshold: 0.6 }
-//     );
-
-//     const elements = document.querySelectorAll(`.${styles.testimonialCard}`);
-//     elements.forEach((el) => observerRef.current.observe(el));
-
-//     return () => observerRef.current.disconnect();
-//   }, []);
-
-//   return (
-//     <section className={styles.testimonialSection}>
-//       <h1 className={styles.testimonialTitle}>Testimonial</h1>
-//       <h2 className={styles.testimonialHeading}>What Our Clients Say</h2>
-//       <p className={styles.testimonialDescription}>
-//         The virtual mechatronics lab has had the great pleasure of working with 
-//         organisations and individuals around the world. Here are the words they have to say.
-//       </p>
-
-//       <div className={styles.testimonialWrapper}>
-//         {testimonials.map((testimonial, index) => (
-//           <div
-//             key={index}
-//             className={`${styles.testimonialCard} ${
-//               index === activeIndex ? styles.active : styles.small
-//             }`}
-//             data-text={testimonial.text}
-//           >
-//             <span className={styles.quoteIcon}>❝</span>
-//             <p className={styles.testimonialText}>{testimonial.text}</p>
-//             <div className={styles.clientInfo}>
-//               <img src={testimonial.avatar} alt={testimonial.name} className={styles.clientAvatar} />
-//               <div>
-//                 <h3 className={styles.clientName}>{testimonial.name}</h3>
-//                 <p className={styles.clientPosition}>{testimonial.position}</p>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* Pagination Dots */}
-//       <div className={styles.pagination}>
-//         {testimonials.map((_, index) => (
-//           <span
-//             key={index}
-//             className={index === activeIndex ? styles.dotActive : styles.dot}
-//           ></span>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-
+const testimonials = [
+  {
+    text: "The virtual mechatronics lab transformed how our students interact with practical content. Brilliant innovation!",
+    name: "John Doe",
+    position: "Engineering Professor",
+    avatar: "/images/dot.jpeg"
+  },
+  {
+    text: "An excellent platform. The hands-on simulations are top-notch! We’ve been able to reach more learners remotely than ever before.",
+    name: "Jane Smith",
+    position: "STEM Program Coordinator",
+    avatar: "/images/vr.png"
+  },
+  {
+    text: "We’ve been able to reach more learners remotely than ever before. Amazing tool!",
+    name: "Ahmed Ali",
+    position: "Technical Lead, EduTech",
+    avatar:  "/images/dot.jpeg"
+  },
+  {
+    text: "An excellent platform. The hands-on simulations are top-notch! We’ve been able to reach more learners remotely than ever before.",
+    name: "Jane Smith",
+    position: "STEM Program Coordinator",
+    avatar: "/images/vr.png"
+  }
+];
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -274,61 +200,16 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <div className={styles.rightSemiCircle2}>
-        <div className={styles.semiCircle2}></div>
-      </div> */}
 
       <div className={styles.sectionDivider}>
 </div>
 
         {/* Testimonial Section */}
-        <TestimonialSection />
-
- {/* Testimonials */}
-  {/* <section className={styles.testimonialSection}>
-  <h1 className={styles.testimonialTitle}>Testimonial</h1>
-  <h2 className={styles.testimonialHeading}>What Our Clients Say</h2>
-  <p className={styles.testimonialDescription}>
-    The virtual mechatronics lab has had the great pleasure of working with 
-    organisations and individuals around the world. Here are the words they have to say.
-  </p>
-
-  <div className={styles.testimonialWrapper}> */}
-    {/* Large Testimonial Card */}
-    {/* <div className={styles.testimonialCard}>
-      <span className={styles.quoteIcon}>❝</span>
-      <p className={styles.testimonialText}>
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it.
-      </p>
-      <div className={styles.clientInfo}>
-        <div className={styles.clientAvatar}></div>
-        <div>
-          <h3 className={styles.clientName}>Lorem Ipsum</h3>
-          <p className={styles.clientPosition}>Lorem Ipsum</p>
-        </div>
-      </div>
-    </div> */}
-
-    {/* Small Testimonial Card */}
-    {/* <div className={styles.smallTestimonialCard}>
-      <div className={styles.clientAvatarSmall}></div>
-      <div>
-        <h3 className={styles.clientNameSmall}>Lorem Ipsum</h3>
-        <p className={styles.clientPositionSmall}>Lorem Ipsum</p>
-      </div>
-    </div>
-  </div> */}
-
-  {/* Pagination Dots */}
-  {/* <div className={styles.pagination}>
-    <span className={styles.dot}></span>
-    <span className={styles.dot}></span>
-    <span className={styles.dot}></span>
-    <span className={styles.dotActive}></span>
-    <span className={styles.dot}></span>
-  </div>
-</section> */}
+        <TestimonialSection 
+         data={testimonials}
+         title="Testimonials"
+         heading="What Our Clients Say"
+         description="The virtual mechatronics lab has had the great pleasure of working with organisations and individuals around the world. Here are the words they have to say."/>
 
     </div>
   );

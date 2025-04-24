@@ -140,10 +140,14 @@ const Hero = ({ page }) => {
       )}
       {page === "about" && (
         <section className={styles.aboutSection}>
+          <div>
+          <div className={styles.aboutCircle}></div>
+          <div className={styles.aboutCircle2}></div>
         <div className={styles.contentContainer}>
+          
           {/* Left Side - Image */}
-          <div className={styles.imageContainer}>
-            <img src="/images/vr-lab-setup.jpg" alt="VR Lab Setup" className={styles.image} />
+          <div className={styles.imageContainers}>
+            <img  src="/images/VR-Machine-assembling.jpeg" alt="VR Lab Setup" className={styles.image} />
           </div>
   
           {/* Right Side - Text */}
@@ -159,6 +163,7 @@ const Hero = ({ page }) => {
               clients move confidently into the future.
             </p>
           </div>
+        </div>
         </div>
       </section>
       )}

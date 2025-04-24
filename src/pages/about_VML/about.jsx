@@ -2,56 +2,50 @@
 import React,  { useState, useEffect }  from 'react'
 import styles from './about.module.css';
 import { Plus, Minus } from "lucide-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Hero from "../../components/hero/heroSection";
+import TestimonialSection from "../../components/caurosel/testimonial";
 
 const faqs = [
   {
     id: 1,
     question: "What is Virtual Mechatronics?",
-    answer:
-      "Virtual Mechatronics is an online platform that offers interactive simulations and educational resources. It integrates mechanical engineering, electrical engineering, computer science, and control engineering to provide a hands-on learning experience.",
+    answer: "Virtual Mechatronics is an online platform that offers interactive simulations and educational resources. It integrates mechanical engineering, electrical engineering, computer science, and control engineering to provide a hands-on learning experience.",
   },
   {
     id: 2,
     question: "What kind of simulations does Virtual Mechatronics offer?",
-    answer:
-      "The platform provides robotics control simulations, automation processes, and digital twin modeling for engineering applications.",
+    answer:"The platform provides robotics control simulations, automation processes, and digital twin modeling for engineering applications.",
   },
   {
     id: 3,
     question: "Can I use Virtual Mechatronics for educational purposes?",
-    answer:
-      "Yes! It is designed for both students and professionals who want to learn and apply mechatronic concepts through simulations.",
+    answer:"Yes! It is designed for both students and professionals who want to learn and apply mechatronic concepts through simulations.",
   },
 ];
 
 const testimonials = [
   {
     id: 1,
-    company: "ISUZU",
-    location: "ISUZU East Africa",
-    message:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    image: "/images/isuzu-car.jpg",
-    logo: "/images/isuzu-logo.png",
+    name: "ISUZU",
+    position: "ISUZU East Africa",
+    text:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    avatar: "/images/dot.jpeg",
+    logo: "/images/dot.jpeg",
   },
   {
     id: 2,
-    company: "Toyota",
-    location: "Toyota Kenya",
-    message:
-      "We had an amazing experience working with the Virtual Mechatronics Lab. The technology and innovation they bring are exceptional.",
-    image: "/images/toyota-car.jpg",
+    name: "Toyota",
+    position: "Toyota Kenya",
+    text:"We had an amazing experience working with the Virtual Mechatronics Lab. The technology and innovation they bring are exceptional.",
+avatar: "/images/vr.png",
     logo: "/images/toyota-logo.png",
   },
   {
     id: 3,
-    company: "Tesla",
-    location: "Tesla Motors",
-    message:
-      "Virtual Mechatronics Lab has transformed the way we approach mechatronics simulations. The team is highly skilled and professional.",
-    image: "/images/tesla-car.jpg",
+    name: "Tesla",
+    position: "Tesla Motors",
+    text:"Virtual Mechatronics Lab has transformed the way we approach mechatronics simulations. The team is highly skilled and professional.",
+    avatar:"/images/dot.jpeg",
     logo: "/images/tesla-logo.png",
   },
 ];
@@ -82,52 +76,77 @@ const AboutPage = () => {
 return (
     <div>
          <Hero page="about" />
-        <section className={styles.aboutSection}>
-      <div className={styles.contentWrapper}>
-        <div className={styles.imageContainer}>
-          {/* <Image src="/images/mechatronics-lab.jpg" alt="Mechatronics Lab" width={400} height={400} className={styles.image} /> */}
-        </div>
-        <div className={styles.textContainer}>
-          <h2>About Virtual Mechatronics Lab</h2>
-          <p>
-            We are a pioneering Virtual Mechatronics Lab at Dedan Kimathi, specializing in 
-            merging virtual reality with mechatronics engineering. By bridging the gap between 
-            physical limitations and mechatronics facilities, we make advanced engineering 
-            accessible through immersive virtual experiences.
-          </p>
-          <p>
-            Our lab embodies cutting-edge technological integration, pushing the boundaries of 
-            mechatronic system design, innovation, and VR-driven automation.
-          </p>
-          <button className={styles.readMore}>Read More</button>
-        </div>
-      </div>
-        </section>
+         <section className={styles.aboutSection}>
+          <h1 className={styles.headings}>About Us</h1>
+  <div className={styles.contentWrapper}>
+    {/* Left: Image */}
+    <div className={styles.imageContainer}>
+      <img
+        src="/images/VR-Machine-assembling.jpeg"
+        alt="Mechatronics Lab"
+        className={styles.image}
+      />
+    </div>
+
+    {/* Right: Text */}
+    <div className={styles.textContainer}>
+
+      <p>
+      We are a pioneering Virtual Mechatronics Lab at Dedan Kimathi, specializing in merging virtual reality with mechatronics engineering. By bridging the gap between physical limitations and mechatronics facilities, we make advanced engineering accessible through immersive virtual experiences. 
+      Discover a new realm of innovation and hands-on learning with us.
+      </p>
+      <ol className={styles.lists}>
+  <div className={styles.listColumn}>
+    <li>Immersive Learning</li>
+    <li>Collaborative Environment</li>
+  </div>
+  <div className={styles.listColumn}>
+    <li>Innovative Tools</li>
+    <li>Comprehensive Education</li>
+  </div>
+</ol>
+
+      <button className={styles.readMore}>Read More</button>
+    </div>
+  </div>
+</section>
+<div className={styles.sectionDivider}>
+</div>
 {/* {VRAbout} */}
         <section className={styles.vrSection}>
-      <div className={styles.contentWrapper}>
+      <div className={styles.contentWrappers}>
         <div className={styles.textContainer}>
           <h2>Virtual Reality</h2>
           <p>
-            We revolutionize mechatronics education through virtual reality, simulating real-world
-            environments and machinery for an interactive, hands-on experience. Our advanced VR
-            technology lets users explore, design, and test mechatronic systems in a fully immersive
-            digital space, enhancing creativity and technical skills.
+          We revolutionize mechatronics education through virtual reality, simulating real-world environments and machinery for an interactive, 
+          hands-on experience. Our advanced VR technology lets users explore, design, and test mechatronic systems in a fully immersive digital space, 
+          enhancing creativity and technical skills.
           </p>
           <p>
             Join us in bridging theoretical knowledge and practical application, shaping the future
             of engineering education.
           </p>
         </div>
-        <div className={styles.imageContainer}>
-          {/* <Image src="/images/vr-experience.jpg" alt="VR Experience" width={500} height={300} className={styles.image} /> */}
+        <div className={styles.imageContainers}>
+        <img
+        src="/images/VR-Machine-assembling.jpeg"
+        alt="Mechatronics Lab"
+        className={styles.image}
+      />
         </div>
       </div>
     </section>
 
 {/* {Know us more} */}
     <section className={styles.knowUsSection}>
-      <h2 className={styles.heading}>Know us more</h2>
+      <h1 className={styles.heading}>Know us more</h1>
+      <div className={styles.logo}>
+      <img
+        src="/images/VR-Machine-assembling.jpeg"
+        alt="Mechatronics Lab"
+        className={styles.logo}
+      />
+      </div>
       <div className={styles.container}>
         <div className={styles.card}>
           <h3>Missions</h3>
@@ -179,8 +198,8 @@ return (
     </section>
 
     {/* {company testimonial} */}
-    <section className={styles.testimonialSection}>
-      <h2 className={styles.Testtitle}>Testimonial</h2>
+     {/* <section className={styles.testimonialSection}>
+      <h2 className={styles.heading}>Testimonial</h2>
       <h3 className={styles.Tstsubtitle}>What Our Clients Say</h3>
       <p className={styles.Testdescription}>
         The virtual mechatronics lab has had the great pleasure of working with
@@ -233,23 +252,15 @@ return (
           />
         ))}
       </div>
-    </section>
+    </section>  */}
+    <TestimonialSection 
+         data={testimonials}
+         title="Testimonials"
+         heading="What Our Clients Say"
+         description="The virtual mechatronics lab has had the great pleasure of working with organisations and individuals around the world. Here are the words they have to say."/>
+
 
     {/* Partners Logos Carousel */}
-<section className={styles.partnersSection}>
-  <div className={styles.partnersCarousel}>
-    <button className={styles.carouselButtonLeft}>&lt;</button>
-
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-    <div className={styles.partnerLogo}></div>
-
-    <button className={styles.carouselButtonRight}>&gt;</button>
-  </div>
-</section>
 
       </div>
    );
