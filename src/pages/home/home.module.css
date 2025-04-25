@@ -364,8 +364,7 @@ transform: scale(1.05);
   -webkit-text-stroke: 1px black; 
   align-items: center;
   gap: 1rem;
-  /* justify-content: center; */
-  margin-left: 400px;
+  text-align: center;
 }
 .heading {
   font-size: 3rem; 

@@ -138,11 +138,12 @@ return (
     </section>
 
 {/* {Know us more} */}
-    <section className={styles.knowUsSection}>
+    <section className={styles.knowUsSection}
+    >
       <h1 className={styles.heading}>Know us more</h1>
-      <div className={styles.logo}>
+      <div>
       <img
-        src="/images/VR-Machine-assembling.jpeg"
+        src="/images/vml logo copy 1.svg"
         alt="Mechatronics Lab"
         className={styles.logo}
       />

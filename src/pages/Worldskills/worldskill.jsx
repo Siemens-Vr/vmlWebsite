@@ -3,11 +3,14 @@ import styles from "./worldskill.module.css";
 import image1 from "../../assets/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg";
 // import image2 from "../../assets/image2.jpg";
 // import image3 from "../../assets/image3.jpg";
+import Hero from "../../components/hero/heroSection"; 
 
 
 const WorldSkills = () => {
   return (
     <>
+    {/* Hero Section */}
+    <Hero page="worldSkills" />
       {/* Main World Skills Section */}
       <section className={styles.worldSkillsSection}>
         <h2 className={styles.title}>WORLD SKILLS</h2>

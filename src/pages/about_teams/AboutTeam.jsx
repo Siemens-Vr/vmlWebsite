@@ -47,7 +47,7 @@ const AboutTeams = () => {
                     <p className={styles.memberDescription}>
                       {expandedIndex === index
                         ? member.description
-                        : `${member.description.slice(0, 120)}...`}
+                        : `${member.description.slice(0, 180)}...`}
                     </p>
                     <button
                       onClick={() => toggleReadMore(index)}
@@ -59,6 +59,26 @@ const AboutTeams = () => {
                     </button>
                   </>
                 )}
+                {(member.github || member.linkedin || member.email) && (
+  <div className={styles.socialLinks}>
+    {member.github && (
+      <a href={member.github} target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    )}
+    {member.linkedin && (
+      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    )}
+    {member.email && (
+      <a href={`mailto:${member.email}`}>
+        Email
+      </a>
+    )}
+  </div>
+)}
+
               </div>
             ))}
           </div>

@@ -1,32 +1,41 @@
 import React from "react";
 import data from "../../assets/data";
+import styles from "./team.module.css";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Team = ({ name }) => {
-    console.log(name)
   const department = data.find(
     (d) => d.department.toLowerCase() === name.toLowerCase()
   );
 
   if (!department) {
-    return <div>Department "{name}" not found.</div>;
+    return <div className={styles.notFound}>Department "{name}" not found.</div>;
   }
 
   return (
-    <div className="bg-white p-6">
-      <h2 className="text-2xl font-bold mb-4">{department.department}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className={styles.teamContainer}>
+      <h2 className={styles.departmentTitle}>{department.department}</h2>
+      <div className={styles.membersGrid}>
         {department.members.map((member, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-md rounded-xl p-4 text-center"
-          >
+          <div key={index} className={styles.card}>
             <img
               src={member.image}
               alt={member.name}
-              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+              className={styles.image}
             />
-            <h3 className="text-lg font-semibold">{member.name}</h3>
-            <p className="text-gray-500">{member.position}</p>
+            <h3 className={styles.name}>{member.name}</h3>
+            <p className={styles.position}>{member.position}</p>
+            <div className={styles.icons}>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+              <a href="mailto:someone@example.com">
+                <FaEnvelope />
+              </a>
+            </div>
           </div>
         ))}
       </div>

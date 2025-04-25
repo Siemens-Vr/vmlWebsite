@@ -1,8 +1,9 @@
 .heroSection {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5rem 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
     background: linear-gradient(to right, #93c5fd, #dbeafe, #e9d5ff);
     border-radius:  0px 0px 50px 50px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -128,18 +129,21 @@
   }
 
   /* about hero */
-  /* .aboutSections {
+  .aboutSections {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(to right, #d0e3f1, #b6cfe6);
+    background-color: #ebe7e7;
     width: 400px;
-    height: 200px;
-    margin-left: 350px;
-    top: auto;
-   
-  } */
+    height: 450px;
+    border-radius: 60px;
+    z-index: 1;
+    top: 15%;
+    left: 17%;
+  }
+  
   
   .contentContainer {
     display: flex;
@@ -152,11 +156,11 @@
     max-width: 1200px;
     width: 1000px;
     gap: 40px;
-    z-index: 1;
     height: 500px;
-    margin-left: 300px;
+    /* margin-left: 300px; */
     margin-bottom: 3;
-    margin-bottom: 150px;
+    top: 0;
+    position: relative;
   }
   .aboutCircle {
     position: absolute;
@@ -165,21 +169,22 @@
     border-radius: 50%;
     background: #262262;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    bottom: 5%;
-    left: 16%;
-    z-index: 0;
+    bottom: 12%;
+    left: 14%;
+  
   }
   .aboutCircle2 {
     position: absolute;
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background-color: #bad6f0;
+    background-color: #ebe7e7;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    bottom:7%;
-    left: 17%;
-    z-index: 0;
+    bottom:14%;
+    left: 15%;
+    
   }
+  .aboutSections,
   .aboutCircle,
 .aboutCircle2 {
   z-index: 1; /* bring above the content container */
@@ -251,61 +256,64 @@
   }
   
   /* TeamCarousel.css */
-.carousel-container {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(to right, #ddeeff, #b0c4de);
-  border-radius: 12px;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.highlight {
-  color: #4b0082;
-}
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.team-card {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.team-card:hover {
-  transform: scale(1.2);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.team-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.team-card p {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 0.9rem;
-  padding: 5px 0;
-}
-
+  /* TeamCarousel.css */
+  .carouselContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    background: linear-gradient(to right, #ddeeff, #b0c4de);
+    border-radius: 12px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #4b0082;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .teamCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .teamCard:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .teamCard img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  
+  .teamCard p {
+    position: static; 
+    background: none;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
 /* Sifahero */
 .sifaHeroContainer {
   display: flex;
@@ -669,4 +677,30 @@ h2 {
   .rightSection{
     display: none;
   }
+}
+.worldcontainer{
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  position: relative; 
+}
+.square1{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: -40%;
+}
+.square2{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  top: 40%;
+  left: -70%;
 }

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styles from "./heroSection.module.css";
-import image1 from "../../assets/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg";
 import { useNavigate } from "react-router-dom";
 
 
 
 const teamMembers = [
-  { name: "Administration", image: {image1}, link: "/administration" },
-  { name: "Virtual Reality", image: "vr.jpg", link: "/virtual-reality" },
-  { name: "Software Developers", image: "software.jpg", link: "/software-developers" },
-  { name: "Virtual Mechatronics", image: "mechatronics.jpg", link: "/virtual-mechatronics" }
+  { name: "Administration", image: "/images/team/prof.png", link: "/administration" },
+  { name: "Virtual Reality", image: "/images/team/elsie.jpg", link: "/virtual-reality" },
+  { name: "Software Developers", image: "/images/team/cheldean.jpg", link: "/software-developers" },
+  { name: "Virtual Mechatronics", image: "/images/team/jere.jpg", link: "/virtual-mechatronics" },
+  { name: "Research", image: "/images/team/jere.jpg", link: "/research" },
 ];
 
 const TeamCarousel = () => {
@@ -22,16 +22,17 @@ const TeamCarousel = () => {
 
   return (
     <>
-    <div className="carousel-container">
+    <div className={styles.carouselContainers}>
       <h2>
-        Meet our <span className="highlight">Talented</span> team members
+        Meet our <span className={styles.highlight}>Talented</span> team members
       </h2>
+      <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Lab</p>
       <p>Our diverse team of skilled professionals is dedicated to driving innovation and excellence in our projects</p>
-      <div className="carousel">
+      <div className={styles.carousel}>
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="team-card"
+            className={styles.teamCard}
             onClick={() => handleClick(member.name)}
           >
             <img src={member.image} alt={member.name} />
@@ -140,7 +141,7 @@ const Hero = ({ page }) => {
       )}
       {page === "about" && (
         <section className={styles.aboutSection}>
-          <div>
+          <div className={styles.aboutSections}></div>
           <div className={styles.aboutCircle}></div>
           <div className={styles.aboutCircle2}></div>
         <div className={styles.contentContainer}>
@@ -164,17 +165,17 @@ const Hero = ({ page }) => {
             </p>
           </div>
         </div>
-        </div>
+     
       </section>
       )}
 
       {page === "about_teams" && (
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>Meet Our Teams</h1>
+          {/* <h1 className={styles.title}>Meet Our Teams</h1>
           <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Lab</p>
           <p className={styles.description}>
             Discover the talented individuals who make our lab a success.
-          </p>
+          </p> */}
           <TeamCarousel />
         </div>
       )}
@@ -202,6 +203,15 @@ const Hero = ({ page }) => {
         </div>
       </div>
     </div>
+    )}
+    {page === "worldSkills" && (
+      <div className={styles.worldcontainer}>
+        <div className={styles.square1}></div>
+        <div className={styles.square2}></div>
+        <div className={styles.square3}></div>
+        <div className={styles.square4}></div>
+        <h2 className={styles.worldSkillsTitle}>WorldSkills Competitions</h2>
+        </div>
     )}
 
 {page === "ai" && (

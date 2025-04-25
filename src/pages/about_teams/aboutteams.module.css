@@ -1,101 +1,107 @@
 .aboutTeams {
-    background: #f5f5f5;
-    padding: 2rem;
-  }
-  
-  .departmentTitle {
-    font-size: 2rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #1a1a1a;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  }
-  
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.departmentSection {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.departmentTitle {
+  font-size: 3rem; 
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px black; 
+  align-items: center;
+  top: 0;
+  text-align: center;
+}
+
+.membersGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.memberCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.memberCard:hover {
+  transform: translateY(-5px);
+}
+
+.memberImage {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.memberName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.memberPosition {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.memberDescription {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.readMoreBtn {
+  background: #2563eb;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.readMoreBtn:hover {
+  background: #1d4ed8;
+}
+
+.socialLinks {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.socialLinks a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socialLinks a:hover {
+  text-decoration: underline;
+}
+
+.notFoundMessage {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #dc2626;
+}
+@media (min-width: 1024px) {
   .membersGrid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    justify-content: center;
-    align-items: stretch;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .memberCard {
-    background-color: #fff;
-    border-radius: 1.5rem;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    cursor: default;
-  }
-  
-  .memberCard:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .memberCard.expanded {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .memberImage {
-    width: 100px;
-    height: 100px;
-    border-radius: 999px;
-    object-fit: cover;
-    margin: 0 auto 1rem;
-    border: 5px solid white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .memberName {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-  
-  .memberPosition {
-    font-style: italic;
-    font-weight: 600;
-    color: #4b5563;
-    margin-bottom: 1rem;
-  }
-  
-  .memberDescription {
-    font-size: 0.95rem;
-    color: #111827;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-  
-  .readMoreBtn {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    border-radius: 999px;
-    border: 2px solid #3b82f6;
-    background-color: transparent;
-    color: #3b82f6;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .readMoreBtn:hover {
-    background-color: #3b82f6;
-    color: white;
-  }
-  
-  .readMoreBtn.active {
-    background-color: #3b82f6;
-    color: white;
-    border-color: #3b82f6;
-  }
-  
-  .notFoundMessage {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #dc2626;
-    padding: 2rem;
-  }
-  
+}
