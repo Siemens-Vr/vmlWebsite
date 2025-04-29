@@ -13,18 +13,18 @@ const WorldSkills = () => {
     <Hero page="worldSkills" />
       {/* Main World Skills Section */}
       <section className={styles.worldSkillsSection}>
-        <h2 className={styles.title}>WORLD SKILLS</h2>
-        <div className={styles.content}>
+        <h2 className={styles.year}>WORLDSKILLS</h2>
+        <div>
           {/* Main Image with rounded corners */}
           <div className={styles.imageContainer}>
             <img
-              src="https://via.placeholder.com/800x400"
+             src="/images/worldskills/Pic5.JPG"
               alt="Group photo"
               className={styles.mainImage}
             />
             {/* Overlay Image */}
             <img
-              src="https://via.placeholder.com/250x200"
+              src="/images/worldskills/pic1.JPG"
               alt="Training session"
               className={styles.overlayImage}
             />
@@ -66,7 +66,7 @@ const WorldSkills = () => {
       {/* 2024 Selection */}
       <section className={styles.nextSection}>
         <h2 className={styles.year}>2024</h2>
-        <div className={styles.nextContent}>
+        <div className={styles.container2022}>
           <div className={styles.textSection}>
             <h3 className={styles.subtitle}>WorldSkill Competitions</h3>
             <p>
@@ -97,36 +97,48 @@ const WorldSkills = () => {
               <button className={styles.visit}>Visit WorldSkill</button>
             </div>
           </div>
-          <div className={styles.imageSection}>
-            <div className={styles.imagePlaceholder}>Image Placeholder</div>
-          </div>
+          <div className={styles.imageContainer2022}>
+          <div className={styles.gradientOverlay}></div>
+          <img
+            src="/images/worldskills/WSC_1.jpg"
+            alt="Mechatronics students working on a project"
+            className={styles.mainImage2022}
+          />
+        </div>
         </div>
       </section>
 
       {/* {2023 section} */}
-      <section className={styles.twentytwentythree}>
-      <div className={styles.imagecontainer}>
-      <img src="https://via.placeholder.com/800x400" alt="WorldSkill Competition" className={styles.competitionimage}/>
+      <section className={styles.worldSkills2022Section}>
+  <h2 className={styles.year2023}>2023</h2>
+  <div className={styles.contentcontainer}>
+    <div className={styles.imagecontainer}>
+    <div className={styles.gradientOverlays}></div>
+      <img
+        src="/images/worldskills/WSC_1.jpg"
+        alt="WorldSkill Competition"
+        className={styles.mainImage2022}
+      />
+    </div>
 
-      </div>
-      <div className={styles.contentcontainer}>
-        <h2 className={styles.year}>2023</h2>
-        <h3 className={styles.title}>WorldSkill Competitions</h3>
-        <p className={styles.description}>
-          To organize successful Mechatronics skills competitions, World Skills Kenya has selected
-          Prof. Eng. Jean Bosco Byiringiro (Ph.D, Reg. Eng.) to champion mechatronics skills both
-          locally and internationally through preparing excellent competitors at Siemens
-          Mechatronics Centre. Cash-for-houses.org utilizes advanced technologies to expedite sales
-          and ensure customer satisfaction.
-        </p>
-        <button className={styles.readmore}>Read More</button>
-      </div>
-     {/* </div> */}
-    </section>
+    <div className={styles.textContent}>
+      <h3 className={styles.title}>WorldSkill Competitions</h3>
+      <p className={styles.description}>
+        To organize successful Mechatronics skills competitions, World Skills Kenya has selected
+        Prof. Eng. Jean Bosco Byiringiro (Ph.D, Reg. Eng.) to champion mechatronics skills both
+        locally and internationally through preparing excellent competitors at Siemens
+        Mechatronics Centre. Cash-for-houses.org utilizes advanced technologies to expedite sales
+        and ensure customer satisfaction.
+      </p>
+      <button className={styles.readmore}>Read More</button>
+    </div>
+  </div>
+</section>
+
 
     {/* {2022Section} */}
     <section className={styles.worldSkills2022Section}>
-      <h2 className={styles.year2022}>2022</h2>
+      <h2 className={styles.year}>2022</h2>
       
       <div className={styles.container2022}>
         {/* Text Content */}
@@ -150,7 +162,7 @@ const WorldSkills = () => {
               "Simplified selling: Customer satisfaction assured.",
             ].map((option, index) => (
               <label key={index} className={styles.optionLabel2022}>
-                <input type="radio" name="skills-2022" className={styles.radioButton2022} />
+                <input type="radio" name="skills-2022" className={styles.radioButton} />
                 {option}
               </label>
             ))}
@@ -164,7 +176,7 @@ const WorldSkills = () => {
         <div className={styles.imageContainer2022}>
           <div className={styles.gradientOverlay}></div>
           <img
-            src={image1} 
+             src="/images/worldskills/WSC_1.jpg"
             alt="Mechatronics students working on a project"
             className={styles.mainImage2022}
           />
@@ -172,29 +184,6 @@ const WorldSkills = () => {
       </div>
     </section>
 
-    
-    {/* Patners */}
-    <section className={styles.partnersSection}>
-      <h1 className={styles.partnersTitle}>Partners</h1>
-      <p className={styles.partnersDescription}>
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it.
-      </p>
-    
-      {/* Partners Logos Carousel */}
-      <div className={styles.partnersCarousel}>
-        <button className={styles.carouselButtonLeft}>&lt;</button>
-        
-        <div className={styles.partnerLogo}></div>
-        <div className={styles.partnerLogo}></div>
-        <div className={styles.partnerLogo}></div>
-        <div className={styles.partnerLogo}></div>
-        <div className={styles.partnerLogo}></div>
-        <div className={styles.partnerLogo}></div>
-    
-        <button className={styles.carouselButtonRight}>&gt;</button>
-      </div>
-    </section>
     </>)
 };
 

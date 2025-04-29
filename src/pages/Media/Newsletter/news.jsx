@@ -6,30 +6,37 @@ const magazinesData = [
     {
       week: "Week 1",
       date: "2025-02-01",
-      cover: "/covers/feb-week1.jpg",
-      description: "Getting started with our innovations",
-      link: "/pdfs/feb-week1.pdf",
+      cover: "/images/covers/week1.png",
+      description: "Virtual Mechatronics Labs use simulation, VR, and AR to create interactive environments. These setups allow users to work with sensors, motors, and control systems without physical hardware.",
+      link: "/images/newsletters/Vml week 1.pdf",
     },
     {
       week: "Week 2",
       date: "2025-02-08",
-      cover: "/covers/feb-week2.jpg",
-      description: "Deeper into automation",
-      link: "/pdfs/feb-week2.pdf",
+      cover: "/images/covers/week2.png",
+      description: "Combining AI, biomechanics, and material science, researchers develop prosthetics with superior comfort and functionality. Healthcare professionals ensure real-world usability.",
+      link: "/images/newsletters/vm week 2.pdf",
     },
     {
       week: "Week 3",
       date: "2025-02-15",
-      cover: "/covers/feb-week3.jpg",
-      description: "Advanced mechatronic systems",
-      link: "/pdfs/feb-week3.pdf",
+      cover: "/images/covers/week3.png",
+      description: "The Siemens Centres ERP system enhances automation, reducing administrative workload and ensuring seamless resource management for optimized workflows.",
+      link: "/images/newsletters/vml week 3.pdf",
     },
     {
       week: "Week 4",
       date: "2025-02-22",
-      cover: "/covers/feb-week4.jpg",
-      description: "Summing up February with VR insights",
-      link: "/pdfs/feb-week4.pdf",
+      cover: "/images/covers/week4.png",
+      description: "Advanced materials enhance durability while minimizing environmental impact. Smart automation streamlines operations, improving efficiency and sustainability.",
+      link: "/images/newsletters/vml week 4.pdf",
+    },
+    {
+      week: "Week 1",
+      date: "2025-03-01",
+      cover: "/images/covers/week1.png",
+      description: "Virtual Mechatronics Labs use simulation, VR, and AR to create interactive environments. These setups allow users to work with sensors, motors, and control systems without physical hardware.",
+      link: "/images/newsletters/Vml week 1.pdf",
     },
   ];
   
@@ -118,20 +125,22 @@ const magazinesData = [
   
           <div className={styles.grid}>
             {filteredMagazines.map((mag, index) => (
-              <a
-                key={index}
-                href={mag.link}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.card}
-              >
-                <div
-                  className={styles.cover}
-                  style={{ backgroundImage: `url(${mag.cover})` }}
-                />
-                <h4>{mag.week}</h4>
-                <p>{mag.description}</p>
-              </a>
+           <div
+           key={index}
+           onClick={() => window.open(mag.link, '_blank', 'noopener,noreferrer,width=1000,height=800')}
+           className={styles.card}
+           role="button"
+           tabIndex={0}
+           onKeyDown={(e) => e.key === 'Enter' && window.open(mag.link, '_blank', 'noopener,noreferrer,width=1000,height=800')}
+         >
+           <div
+             className={styles.cover}
+             style={{ backgroundImage: `url(${mag.cover})` }}
+           />
+           <h4>{mag.week}</h4>
+           <p>{mag.description}</p>
+         </div>
+         
             ))}
           </div>
         </section>

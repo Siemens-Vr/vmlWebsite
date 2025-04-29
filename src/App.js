@@ -15,7 +15,9 @@ import AR from "./pages/Projects/AR/AR";
 import VR from "./pages/Projects/VR/VR";
 import Prosthetics from "./pages/Projects/Prosthetics/Prosthetics";
 import Partners from "./components/partners/partners";
-
+import Contact from "./pages/contact/contact";
+import Terms from "./pages/terms/terms";
+import Privacy from "./pages/privacy/privacy";
 
 export default function Home() {
   return (
@@ -35,6 +37,9 @@ export default function Home() {
         <Route path="/AR/AR" element={<AR />} />
         <Route path="/VR/VR" element={<VR />} />
         <Route path="/Prosthetics/Prosthetics" element={<Prosthetics />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
      <Partners />
       <Footer />

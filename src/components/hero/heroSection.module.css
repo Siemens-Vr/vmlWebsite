@@ -441,11 +441,9 @@
 .newsletterHero {
   width: 100%;
   padding: 60px 20px;
-  background: linear-gradient(90deg, #89cde9, #b8d8d4);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .newsletterTitle {
@@ -684,23 +682,60 @@
   height: 500px;
   position: relative; 
 }
+.worldSkillsTitle{
+  align-items: center;
+  font-size: 3rem;
+  margin-top: 200px;
+  width: 100%;
+}
 .square1{
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: #f0f0f0;
+  width: 80px;
+  height: 80px;
+  background-color: #000;
   border-radius: 20px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
   top: 0;
   left: -40%;
 }
 .square2{
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  top: 35%;
+  left: -70%;
+}
+.square3{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  top: 70%;
+  left: -40%;
+}
+.square4{
+  position: absolute;
+  width: 80px;
+  height: 80px;
   background-color: #000;
   border-radius: 20px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  top: 40%;
-  left: -70%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: -40%;
+}
+
+.square6{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  top: 60%;
+  right: -70%;
 }

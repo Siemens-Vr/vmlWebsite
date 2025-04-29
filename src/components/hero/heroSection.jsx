@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom";
 
 
 const teamMembers = [
-  { name: "Administration", image: "/images/team/prof.png", link: "/administration" },
-  { name: "Virtual Reality", image: "/images/team/elsie.jpg", link: "/virtual-reality" },
+  { name: "Administration", image: "/images/team/prof.JPG", link: "/administration" },
+  { name: "Virtual Mechatronics", image: "/images/team/edwin.png", link: "/virtual-mechatronics" },
   { name: "Software Developers", image: "/images/team/cheldean.jpg", link: "/software-developers" },
-  { name: "Virtual Mechatronics", image: "/images/team/jere.jpg", link: "/virtual-mechatronics" },
-  { name: "Research", image: "/images/team/jere.jpg", link: "/research" },
+  { name: "CAD Modelling", image: "/images/team/jere.jpg", link: "/cad-modelling" },
+  { name: "Research", image: "/images/team/elsie.jpg", link: "/research" },
 ];
 
 const TeamCarousel = () => {
@@ -210,7 +210,11 @@ const Hero = ({ page }) => {
         <div className={styles.square2}></div>
         <div className={styles.square3}></div>
         <div className={styles.square4}></div>
-        <h2 className={styles.worldSkillsTitle}>WorldSkills Competitions</h2>
+        <div className={styles.square5}></div>
+        <div className={styles.square6}></div>
+        <h2 className={styles.worldSkillsTitle}>World<span className={styles.highlight}>Skills </span>
+          <br />
+          <span className={styles.highlight}>Competitions</span></h2>
         </div>
     )}
 
@@ -289,11 +293,36 @@ const Hero = ({ page }) => {
 {page === "newsletters" && (
   <div className={styles.newsletterHero}>
     <h1 className={styles.newsletterTitle}>
-      Virtual Mechatronics labs <br />
+      Virtual Mechatronics Labs <br />
       <span className={styles.newsletterSubtitle}>Newsletters</span>
     </h1>
   </div>
 )}
+{page === "contact" && (
+  <div className={styles.newsletterHero}>
+    <h1 className={styles.newsletterTitle}>
+      We Value your<span className={styles.highlight}> FeedBacks</span> <br />
+      <span className={styles.newsletterSubtitle}>Reach Us Today!!</span>
+    </h1>
+  </div>
+)}
+{page === "terms" && (
+  <div className={styles.newsletterHero}>
+    <h1 className={styles.newsletterTitle}>
+      Please Read Our<span className={styles.highlight}> Terms & Conditions</span> <br />
+      <span className={styles.newsletterSubtitle}>Understand Your Rights and Responsibilities</span>
+    </h1>
+  </div>
+)}
+{page === "privacy" && (
+  <div className={styles.newsletterHero}>
+    <h1 className={styles.newsletterTitle}>
+      Our Commitment to Your<span className={styles.highlight}> Privacy</span> <br />
+      <span className={styles.newsletterSubtitle}>Learn How We Protect Your Information</span>
+    </h1>
+  </div>
+)}
+
 
     </section>
   );
