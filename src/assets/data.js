@@ -140,7 +140,7 @@ const data = [
           name: "Joel Omondi",
           position: "Software Engineer",
           description:
-            "It involves creating and designing an informational website for the Virtual Reality Mechatronics Lab, serving as a central hub to showcase the lab's innovative projects and products. The website features detailed information about the lab's mission and research activities, along with an integrated e-commerce section that allows users to browse and purchase mechatronic devices and tools developed in the lab. A standout feature is the interactive 3D models of the products, enabling potential buyers to explore items in detail before making a purchase, thereby enhancing the overall shopping experience. This website aims to promote the lab's work, facilitate product sales, and provide an engaging user experience through cutting-edge technology.",
+            "I'm a versatile technology expert blending software engineering, full stack web development, and high-impact digital design. I specialize in building scalable, modern web applications using React, Next.js, Node.js, Express, and PostgreSQL — all while delivering visually striking interfaces through expert UI/UX design, branding, and graphic artistry. My unique approach bridges code and creativity, allowing me to create seamless, end-to-end digital experiences that perform and inspire",
             github:"https://github.com/Omondi003",
             linkedin:"https://www.linkedin.com/in/joel-omondi-40a532268/ ",
             email:"joelomondi2003@gmail.com",
