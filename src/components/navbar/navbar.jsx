@@ -123,7 +123,7 @@ const Navbar = () => {
           )}
         </li>
         <NavLink 
-          to="https://siemensdekut.dkut.ac.ke/" 
+          to="https://siemens.dkut.ac.ke/" 
           className={({ isActive }) => isActive ? "active" : ""}
            target="_blank" rel="noopener noreferrer"
         >

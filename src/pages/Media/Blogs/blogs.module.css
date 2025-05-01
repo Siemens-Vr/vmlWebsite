@@ -13,6 +13,8 @@
   .blogsGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
+    max-width: 1200px; 
+    margin: 0 auto; 
     gap: 2rem;
   }
   
