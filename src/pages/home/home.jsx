@@ -47,10 +47,10 @@ const Home = () => {
         <div className={styles.overlapContainer}>
         <div className={styles.circleBottom}></div>
         <div className={styles.circleTop}>
-        <img
-          src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg"
+        <video 
+          src="/images/Home/video1.mp4"
           alt="Mechatronics"
-          className={styles.image}
+          className={styles.image} autoPlay loop muted playsInline
         />
         <div className={styles.smallCircle}></div> 
       </div>
@@ -98,10 +98,10 @@ const Home = () => {
           <div className={styles.overlapContainer}>
         <div className={styles.circleBottom1}></div>
         <div className={styles.circleTop1}>
-        <img
-          src="/images/WhatsApp Image 2025-02-05 at 17.50.03_fc9783af.jpg"
+        <video
+          src="/images/Home/video2.mp4"
           alt="Mechatronics"
-          className={styles.image}
+          className={styles.image} autoPlay loop muted playsInline
         />
         <div className={styles.smallCircle1}></div> 
       </div>

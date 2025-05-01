@@ -115,7 +115,7 @@ const WorldSkills = () => {
     <div className={styles.imagecontainer}>
     <div className={styles.gradientOverlays}></div>
       <img
-        src="/images/worldskills/WSC_1.jpg"
+        src="/images/worldskills/pic6.JPG"
         alt="WorldSkill Competition"
         className={styles.mainImage2022}
       />
@@ -176,7 +176,7 @@ const WorldSkills = () => {
         <div className={styles.imageContainer2022}>
           <div className={styles.gradientOverlay}></div>
           <img
-             src="/images/worldskills/WSC_1.jpg"
+             src="/images/worldskills/Pic7.png"
             alt="Mechatronics students working on a project"
             className={styles.mainImage2022}
           />

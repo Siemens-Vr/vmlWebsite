@@ -81,10 +81,10 @@ return (
   <div className={styles.contentWrapper}>
     {/* Left: Image */}
     <div className={styles.imageContainer}>
-      <img
-        src="/images/VR-Machine-assembling.jpeg"
+      <video
+        src="/images/about/image3.mp4"
         alt="Mechatronics Lab"
-        className={styles.image}
+        className={styles.image} autoplay loop muted playsInline
       />
     </div>
 

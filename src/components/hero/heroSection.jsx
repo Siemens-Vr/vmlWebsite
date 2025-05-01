@@ -47,7 +47,58 @@ const TeamCarousel = () => {
     </>
   );
 };
+const BlogDetails = [
+  {
+    name: "Virtual Reality",
+    image: "/images/team/prof.JPG",
+    link: "/virtual-reality",
+  },
+  {
+    name: "Software Blogs",
+    image: "/images/team/edwin.png",
+    link: "/software-blogs",
+  },
+  
+];
 
+const BlogCarousel = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (name) => {
+    navigate("/Blogs/blogs", { state: { departmentName: name } });
+  };
+
+  return (
+    <div className={styles.blogContainers}>
+      <h2 className={styles.blogheading}>
+        Virtual Mechatronics <span className={styles.highlight}>Blogs</span>
+      </h2>
+      <p className={styles.blogsubtitle}>
+        Beyond Reality: <span className={styles.highlight}> Exploring the future of <strong>Tech</strong>,{" "}
+          <br />
+          One <strong>Post</strong> at a Time
+        </span>
+      </p>
+      <p className={styles.blogdescription}>
+        Our diverse team of skilled professionals is dedicated to driving
+        innovation and excellence in our projects.
+      </p>
+
+      <div className={styles.blogcarousel}>
+        {BlogDetails.map((member, index) => (
+          <div
+            key={index}
+            className={styles.blogcard}
+            onClick={() => handleClick(member.name)}
+          >
+            <img src={member.image} alt={member.name} className={styles.image} />
+            <p className={styles.blogcardTitle}>{member.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Hero = ({ page }) => {
   const [timeLeft, setTimeLeft] = useState("00:00:00");
@@ -83,7 +134,7 @@ const Hero = ({ page }) => {
       {page === "home" && (
         <>
           <div className={styles.leftSection}>
-            <h1 className={styles.title}>Virtual Mechatronics Lab</h1>
+            <h1 className={styles.title}>Virtual Mechatronics Labs</h1>
             <p className={styles.subtitle}>Revolutionizing Education In Africa</p>
             <p className={styles.description}>
               Welcome to the{" "}
@@ -148,7 +199,7 @@ const Hero = ({ page }) => {
           
           {/* Left Side - Image */}
           <div className={styles.imageContainers}>
-            <img  src="/images/VR-Machine-assembling.jpeg" alt="VR Lab Setup" className={styles.image} />
+            <img  src="/images/about/12.jpg" alt="VR Lab Setup" className={styles.image} />
           </div>
   
           {/* Right Side - Text */}
@@ -298,6 +349,16 @@ const Hero = ({ page }) => {
     </h1>
   </div>
 )}
+{page === "blogs" && (
+        <div className={styles.heroContent}>
+          {/* <h1 className={styles.title}>Meet Our Teams</h1>
+          <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Lab</p>
+          <p className={styles.description}>
+            Discover the talented individuals who make our lab a success.
+          </p> */}
+          <BlogCarousel />
+        </div>
+      )}
 {page === "contact" && (
   <div className={styles.newsletterHero}>
     <h1 className={styles.newsletterTitle}>
