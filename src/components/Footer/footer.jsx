@@ -25,10 +25,10 @@ const Footer = () => {
           <div className={styles.column}>
             <h3>Popular Links</h3>
             <ul>
-              <li><a href="/about">About Us</a></li>
+              <li><a href="/about-vml">About Us</a></li>
               <li><a href="/contact">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
           </div>
@@ -48,7 +48,7 @@ const Footer = () => {
           <h3>Contact US</h3>
           <ul>
             <li><FaMapMarkerAlt /> Nyeri, Kenya</li>
-            <li><FaPhone /> +2547 16 150 627</li>
+            <li><FaPhone /> +254 716 150 627</li>
             <li><FaEnvelope /> vr.africa@dkut.ac.ke</li>
           </ul>
         </div>

@@ -1,57 +1,131 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 60px;
-    background: linear-gradient(to right, #e0f7fa, #b2ebf2);
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .logo img {
-    height: 40px;
-    background: inherit;
-  }
-  
-  .navLinks {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    padding:40;
-    align-items: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  border-bottom: 1px solid #ccc;
+}
 
-  }
-  
-  .navLinks li {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .navLinks a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-  }
-  
-  .navLinks .active {
-    color: #0077cc;
-    font-weight: bold;
-  }
-  
-  .navLinks a:hover {
-    color: #0077cc;
-  }
-  
-  .notification {
-    position: relative;
-    margin-right: 20px;
-  }
-  
-  .notification svg {
-    color: black;
-    cursor: pointer;
-  }
-  
-  .notification svg:hover {
-    color: #0077cc;
-  }
-  
+.logo {
+  height: 40px;
+  /* background: inherit; */
+}
+
+ .img {
+  height: 60px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  align-items: left;
+}
+
+.navLinks li {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+  color: #0077cc;
+}
+
+.navLinks a.active::after {
+  width: 100%;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #0077cc;
+  transition: width 0.3s ease-in-out;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  min-width: 200px; /* Increased width */
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownMenu li {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdownMenu li a {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px; /* Adds spacing for wider appearance */
+  color: #000;
+  display: block;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.dropdownMenu li a:hover {
+  color: #0077cc;
+}
+
+/* Notification Icon */
+.notification {
+  position: relative;
+  margin-right: 20px;
+}
+
+.notification svg {
+  color: black;
+  cursor: pointer;
+}
+
+.notification svg:hover {
+  color: #0077cc;
+}
