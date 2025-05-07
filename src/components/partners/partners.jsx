@@ -8,7 +8,7 @@ import Eu from '../../assets/images/logos/EN Co-Funded by the EU_POS.png';
 import Kfw from '../../assets/images/logos/KfW_LOGO.png';
 import Vml from '../../assets/images/logos/Virtual Mechatronics Lab Logo V2-01.png';
 import FESTO from '../../assets/images/logos/FESTO.png';
-import SIEMENS from '../../assets/images/logos/Siemens.png';
+import SIEMENS from '../../assets/images/logos/SIEMENS.png';
 
 const Partners = () => {
   const logos = [
