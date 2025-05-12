@@ -23,21 +23,21 @@ const data = [
     },
     {
       title: "Getting Started with Augmented Reality Development",
-      author: "Mary Wangari",
-      date: "February 20, 2025",
+      author: "Virtual Mechatronics Labs",
+      date: "May 8, 2025",
       image: "/images/blogs/SCADA.png",
       content:
-        "Augmented reality (AR) blends digital content with the real world. Developers can get started using platforms like Unity with AR Foundation, Vuforia, or WebAR. Learn how to build AR experiences for mobile apps and the web with minimal barriers to entry.",
-      link: "https://example.com/blogs/augmented-reality-guide"
+        "Augmented Reality (AR) is no longer a futuristic concept — it’s part of our everyday lives. From Snapchat filters and IKEA’s virtual furniture placement to educational apps that bring textbooks to life, AR has transformed how we interact with digital content. But what does it take to build AR experiences? If you’re curious about diving into AR development, this blog is your roadmap to getting started.",
+      link: "https://medium.com/@vr.africa_15385/getting-started-with-augmented-reality-development-06b5daaae8d2"
     },
     {
       title: "Designing Inclusive User Interfaces in VR",
-      author: "Peter Kamau",
-      date: "January 10, 2025",
+      author: "Virtual Mechatronics Labs",
+      date: "May 9, 2025",
       image: "/images/blogs/project3.png",
       content:
-        "Accessibility in virtual environments is often overlooked. Designing inclusive interfaces in VR involves clear spatial audio cues, responsive controls, and colorblind-friendly visual elements. These considerations ensure a wider range of users can benefit from VR technologies.",
-      link: "https://example.com/blogs/inclusive-ui-vr"
+        "As virtual reality (VR) continues to redefine digital interaction, ensuring that these immersive experiences are accessible and inclusive for everyone becomes more than a feature — it’s a responsibility. Designing inclusive user interfaces (UI) in VR is about making technology work for people of all abilities, backgrounds, and environments. Whether you’re a developer, designer, or content creator, it’s time to consider who you’re designing for and how they will experience it.",
+      link: "https://medium.com/@vr.africa_15385/designing-inclusive-user-interfaces-in-vr-93c67f4bea81"
     },
 ],
     },
@@ -45,13 +45,13 @@ const data = [
         group: "Software Blogs",
         list: [
             {
-      title: "Designing Inclusive User Interfaces in VR",
-      author: "Peter Kamau",
-      date: "January 10, 2025",
+      title: "What is an ERP System? A Beginner's Guide to Enterprise Resource Planning",
+      author: "Virtual Mechatronics Labs",
+      date: "May 10, 2025",
       image: "/images/blogs/project3.png",
       content:
-        "Accessibility in virtual environments is often overlooked. Designing inclusive interfaces in VR involves clear spatial audio cues, responsive controls, and colorblind-friendly visual elements. These considerations ensure a wider range of users can benefit from VR technologies.",
-      link: "https://example.com/blogs/inclusive-ui-vr"
+        "If you've ever juggled spreadsheets, emails, and disconnected software just to run a business, you've already faced the problem ERP systems are designed to solve. ERP stands for Enterprise Resource Planning, and it's a software solution that integrates core business functions into a single system.",
+      link: "https://medium.com/@vr.africa_15385/what-is-an-erp-system-a-beginners-guide-to-enterprise-resource-planning-783ee94dc83a"
     },
     {
         title: "Designing Inclusive User Interfaces in VR",

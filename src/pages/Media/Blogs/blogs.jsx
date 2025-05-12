@@ -15,7 +15,7 @@ const Blogs = () => {
     <>
       <Hero page="blogs" />
       <div className={styles.blogsPage}>
-        <h1 className={styles.pageTitle}>{group || "All"} </h1>
+        <h1 className={styles.heading}>{group} </h1>
         {blogs.length === 0 ? (
           <p>No blogs available for this category.</p>
         ) : (

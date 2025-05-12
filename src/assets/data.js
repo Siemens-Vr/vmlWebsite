@@ -187,16 +187,6 @@ const data = [
           linkedin:"https:linkedin.com/in/elsie-makara-1a7570222 ",
           email:"elsiemakara3p@gmail.com ",
           },
-      {
-        image:"/images/team/benjamin.jpg",
-        name: "Kipkemoi Rono",
-        position: "Research",
-        description:
-          "This project focuses on the development of a digital twinning solution for the uFactory xArm7 robotic arm, using ROS 2 and Unity for virtual control and real-time synchronization. The primary goal is to enable seamless bidirectional communication between the real robotic arm and its virtual counterpart in Unity. This allows any movement or action performed by the physical robot to be reflected in the virtual model and vice versa. Key functionalities include control via both joint space and Cartesian space commands, enabling precise manipulation and coordination between the real and virtual environments. The project aims to leverage the digital twin for applications in simulation, remote control, and advanced robotic interaction scenarios, contributing to advancements in robotics, automation, and system testing",
-          github:" ",
-          linkedin:" ",
-          email:" ",
-        },
         {
           image:"/images/team/wesely rotich.jpeg",
           name: "Wesley Rotich",
