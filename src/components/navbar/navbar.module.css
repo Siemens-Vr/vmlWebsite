@@ -9,10 +9,9 @@
 
 .logo {
   height: 40px;
-  /* background: inherit; */
 }
 
- .img {
+.img {
   height: 60px;
 }
 
@@ -30,7 +29,7 @@
   position: relative;
 }
 
-.navLinks a {
+.navLink {
   text-decoration: none;
   color: #000;
   transition: color 0.3s ease-in-out;
@@ -40,28 +39,19 @@
   font-weight: 500;
 }
 
-.navLinks a:hover,
-.navLinks a.active {
+.activeNavLink {
+  text-decoration: none;
+  color: #0077cc !important;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
+
+.navLink:hover {
   color: #0077cc;
-}
-
-.navLinks a.active::after {
-  width: 100%;
-}
-
-.navLinks a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #0077cc;
-  transition: width 0.3s ease-in-out;
-}
-
-.navLinks a:hover::after {
-  width: 100%;
 }
 
 /* Dropdown Styles */
@@ -83,10 +73,10 @@
   flex-direction: column;
   opacity: 0;
   visibility: hidden;
-  z-index: 2;
+  z-index: 10;
   transform: translateY(10px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  min-width: 200px; /* Increased width */
+  min-width: 200px;
 }
 
 .dropdown:hover .dropdownMenu {
@@ -104,7 +94,7 @@
 .dropdownMenu li a {
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 20px; /* Adds spacing for wider appearance */
+  padding: 10px 20px;
   color: #000;
   display: block;
   transition: color 0.3s;
