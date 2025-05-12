@@ -1,207 +1,189 @@
 import React, { useState } from "react";
 import styles from "../navbar/navbar.module.css";
-import { Bell, ChevronDown } from "lucide-react";
+import { Bell, ChevronDown, Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import Image from "../../assets/images/logos/Virtual Mechatronics Lab Logo V2-01.png";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleDropdown = (menu) => {
+  const handleDropdownEnter = (menu) => {
     setDropdownOpen(menu);
+  };
+
+  const handleDropdownClick = (menu) => {
+    setDropdownOpen(dropdownOpen === menu ? null : menu);
   };
 
   const closeDropdown = () => {
     setDropdownOpen(null);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    setDropdownOpen(null);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setDropdownOpen(null);
+  };
+
+  const NavDropdown = ({ title, children, menuKey }) => {
+    return (
+      <li 
+        className={styles.dropdown}
+        onClick={() => handleDropdownClick(menuKey)}
+        onMouseEnter={() => handleDropdownEnter(menuKey)}
+        onMouseLeave={closeDropdown}
+      >
+        <div 
+          className={styles.dropdownTitle}
+        >
+          {title} <ChevronDown size={14} />
+        </div>
+        {dropdownOpen === menuKey && (
+          <ul className={styles.dropdownMenu}>
+            {children}
+          </ul>
+        )}
+      </li>
+    );
+  };
+
+  const NavItemLink = ({ to, children, className, ...props }) => (
+    <NavLink 
+      to={to} 
+      className={({ isActive }) => 
+        isActive ? styles.activeNavLink : className || styles.navLink
+      }
+      onClick={closeMobileMenu}
+      {...props}
+    >
+      {children}
+    </NavLink>
+  );
+
+  // Define menu items as arrays for easier rendering
+  const homeItems = [
+    { to: "/", label: "Home" }
+  ];
+
+  const aboutItems = [
+    { to: "/about-vml", label: "VML" },
+    { to: "/about-teams", label: "Team" }
+  ];
+
+  const researchProjectsItems = [
+    { to: "/AI/AI", label: "Artificial Intelligence" },
+    { to: "/AR/AR", label: "Augmented Reality" },
+    { to: "/VR/VR", label: "Virtual Reality" },
+    { to: "/Prosthetics/Prosthetics", label: "Prosthetics" }
+  ];
+
+  const mediaItems = [
+    { to: "/Blogs/blogs", label: "Blogs" },
+    { to: "/Newsletter/news", label: "Newsletters" },
+    { to: "/Conference/conference", label: "Conferences" }
+  ];
+
+  // Rendering function for dropdown menu items
+  const renderDropdownItems = (items) => 
+    items.map((item, index) => (
+      <li key={index}>
+        <NavItemLink to={item.to}>{item.label}</NavItemLink>
+      </li>
+    ));
+
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <img src={Image} alt="Logo" className={styles.img} />
-      </div>
+      <div className={styles.navbarContainer}>
+        <div className={styles.logoContainer}>
+          <div className={styles.logo}>
+            <img src={Image} alt="Logo" className={styles.img} />
+          </div>
+          
+          <div className={styles.mobileIcons}>
+            <div className={styles.notification}>
+              <Bell size={24} />
+            </div>
+            <button 
+              className={styles.hamburgerMenu} 
+              onClick={toggleMobileMenu}
+              aria-label="Toggle Menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
 
-      <ul className={styles.navLinks}>
-        <li>
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => 
-              isActive ? styles.activeNavLink : styles.navLink
-            }
-          >
-            Home
-          </NavLink>
-        </li>
-
-        <li
-          className={styles.dropdown}
-          onMouseEnter={() => handleDropdown("about")}
-          onMouseLeave={closeDropdown}
+        <ul 
+          className={`${styles.navLinks} ${mobileMenuOpen ? styles.mobileNavLinksOpen : styles.mobileNavLinksClosed}`}
         >
-          <span className={styles.navLinkd}>
-            About <ChevronDown size={14} />
-          </span>
-          {dropdownOpen === "about" && (
-            <ul className={styles.dropdownMenu}>
-              <li>
-                <NavLink 
-                  to="/about-vml" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/about-teams" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Team
-                </NavLink>
-              </li>
-            </ul>
-          )}
-        </li>
+          {/* Desktop Dropdown */}
+          <li>
+            <NavItemLink to="/">Home</NavItemLink>
+          </li>
 
-        <li>
-          <NavLink 
-            to="/worldskill" 
-            className={({ isActive }) => 
-              isActive ? styles.activeNavLink : styles.navLink
-            }
-          >
-            WorldSkill
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/sifa" 
-            className={({ isActive }) => 
-              isActive ? styles.activeNavLink : styles.navLink
-            }
-          >
-            SIFA (AUDA-NEPAD)
-          </NavLink>
-        </li>
+          <NavDropdown title="About" menuKey="about">
+            {renderDropdownItems(aboutItems)}
+          </NavDropdown>
 
-        <li
-          className={styles.dropdown}
-          onMouseEnter={() => handleDropdown("projects")}
-          onMouseLeave={closeDropdown}
-        >
-          <span className={styles.navItem}>
-            Research Projects <ChevronDown size={14} />
-          </span>
-          {dropdownOpen === "projects" && (
-            <ul className={styles.dropdownMenu}>
-              <li>
-                <NavLink 
-                  to="/AR/AR" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Augmented Reality
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/VR/VR" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Virtual Reality
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/AI/AI" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Artificial Intelligence
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/Prosthetics/Prosthetics" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Prosthetics
-                </NavLink>
-              </li>
-            </ul>
-          )}
-        </li>
+          {/* Direct nav items for desktop */}
+          <li>
+            <NavItemLink to="/worldskill">WorldSkill</NavItemLink>
+          </li>
+          <li>
+            <NavItemLink to="/sifa">SIFA (AUDA-NEPAD)</NavItemLink>
+          </li>
 
-        <li
-          className={styles.dropdown}
-          onMouseEnter={() => handleDropdown("media")}
-          onMouseLeave={closeDropdown}
-        >
-          <span className={styles.navItem}>
-            Media <ChevronDown size={14} />
-          </span>
-          {dropdownOpen === "media" && (
-            <ul className={styles.dropdownMenu}>
-              <li>
-                <NavLink 
-                  to="/Blogs/blogs" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Blogs
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/Newsletter/news" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Newsletters
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/Conference/conference" 
-                  className={({ isActive }) => 
-                    isActive ? styles.activeNavLink : styles.navLink
-                  }
-                >
-                  Conferences
-                </NavLink>
-              </li>
-            </ul>
-          )}
-        </li>
+          <NavDropdown title="Research Projects" menuKey="research">
+            {renderDropdownItems(researchProjectsItems)}
+          </NavDropdown>
 
-        <li>
-          <NavLink 
-            to="https://siemens.dkut.ac.ke/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={({ isActive }) => 
-              isActive ? styles.activeNavLink : styles.navLink
-            }
-          >
-            Siemens Centre
-          </NavLink>
-        </li>
-      </ul>
+          <NavDropdown title="Media" menuKey="media">
+            {renderDropdownItems(mediaItems)}
+          </NavDropdown>
 
-      <div className={styles.notification}>
-        <Bell size={24} />
+          <li>
+            <NavItemLink 
+             to="https://siemens.dkut.ac.ke/"
+             target="_blank"
+             rel="noopener noreferrer"
+             className={styles.externalLink}
+            >
+              Siemens Centre
+            </NavItemLink>
+          </li>
+        </ul>
+
+        {/* Mobile Menu (Separate Rendering) */}
+        {mobileMenuOpen && (
+          <ul className={styles.mobileMenu}>
+            {/* Flattened Mobile Menu Items */}
+            {[
+              ...homeItems,
+              ...aboutItems,
+              { to: "/worldskill", label: "WorldSkill" },
+              { to: "/sifa", label: "SIFA (AUDA-NEPAD)" },
+              ...researchProjectsItems,
+              ...mediaItems,
+              { to: "https://siemens.dkut.ac.ke/", label: "Siemens Centre", external: true }
+            ].map((item, index) => (
+              <li key={index}>
+                <NavItemLink 
+                  to={item.to}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  className={styles.mobileSectionTitle}
+                >
+                  {item.label}
+                </NavItemLink>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </nav>
   );

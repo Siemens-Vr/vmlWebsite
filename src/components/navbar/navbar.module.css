@@ -1,3 +1,4 @@
+/* Base Navbar Styles */
 .navbar {
   display: flex;
   align-items: center;
@@ -5,6 +6,20 @@
   padding: 15px 60px;
   background: linear-gradient(to right, #e0f7fa, #b2ebf2);
   border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -15,12 +30,13 @@
   height: 60px;
 }
 
+/* Navigation Links */
 .navLinks {
   display: flex;
   list-style: none;
   gap: 20px;
   padding: 0;
-  align-items: left;
+  align-items: center;
 }
 
 .navLinks li {
@@ -59,15 +75,19 @@
   position: relative;
 }
 
+.dropdownTitle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .dropdownMenu {
   position: absolute;
   list-style: none;
-  margin: 0;
   padding: 10px;
-  top: 100%;
   left: 0;
   background: white;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -76,7 +96,7 @@
   z-index: 10;
   transform: translateY(10px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .dropdown:hover .dropdownMenu {
@@ -86,15 +106,15 @@
 }
 
 .dropdownMenu li {
-  padding: 10px;
-  margin: 0;
+  padding: 5px;
+  /* margin: 0; */
   list-style: none;
 }
 
 .dropdownMenu li a {
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   color: #000;
   display: block;
   transition: color 0.3s;
@@ -105,7 +125,19 @@
   color: #0077cc;
 }
 
-/* Notification Icon */
+/* Notification and Mobile Icons */
+.mobileIcons {
+  display: none;
+}
+
+.hamburgeMenu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+ 
+}
+
 .notification {
   position: relative;
   margin-right: 20px;
@@ -118,4 +150,114 @@
 
 .notification svg:hover {
   color: #0077cc;
+}
+
+/* Mobile Section Titles */
+.mobileSectionTitle {
+  display: none;
+  list-style: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbarContainer {
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobileIcons {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    z-index: 100;
+  }
+
+  /* Hide desktop dropdowns */
+  .dropdown {
+    display: none;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileNavLinksClosed {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: white;
+    padding: 15px;
+    z-index: 50;
+    gap: 10px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 0 0 0 10px;
+    list-style: none;
+  }
+
+  /* Mobile Section Titles */
+  .mobileSectionTitle {
+    display: block;
+    font-weight: 600;
+    color: black;
+    text-align: right;
+    font-size: 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+
+  .mobileNavLinksOpen > li:not(.mobileSectionTitle) {
+    width: 100%;
+    text-align: right;
+    padding: 5px 0;
+    list-style: none;
+  }
+
+  .mobileNavLinksOpen > li:not(.mobileSectionTitle) a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+  }
+
+  .mobileNavLinksOpen > li:not(.mobileSectionTitle) a:hover {
+    color: #0077cc;
+  }
+
+  .mobileNavLinksOpen > li:not(.mobileSectionTitle) a.activeNavLink {
+    color: #0077cc !important;
+    font-weight: 600;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+  }
 }
