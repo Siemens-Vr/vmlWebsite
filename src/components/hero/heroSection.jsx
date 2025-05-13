@@ -28,15 +28,15 @@ const TeamCarousel = () => {
       </h2>
       <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Lab</p>
       <p>Our diverse team of skilled professionals is dedicated to driving innovation and excellence in our projects</p>
-      <div className={styles.carousel}>
+      <div className={styles.blogcarousel}>
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className={styles.teamCard}
+            className={styles.blogcards}
             onClick={() => handleClick(member.name)}
           >
-            <img src={member.image} alt={member.name} />
-            <p>{member.name}</p>
+            <img src={member.image} alt={member.name} className={styles.image}/>
+            <p className={styles.blogcardTitle} >{member.name}</p>
           </div>
         ))}
       </div>

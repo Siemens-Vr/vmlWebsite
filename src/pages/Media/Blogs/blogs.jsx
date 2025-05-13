@@ -1,39 +1,76 @@
-import React from "react";
-import Hero from "../../../components/hero/heroSection";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import Hero from "../../../components/hero/heroSection";
 import blogData from "../../../assets/blogs";
-import styles from "./blogs.module.css"; // Make sure this matches the actual path
+import styles from "./blogs.module.css";
 
 const Blogs = () => {
   const location = useLocation();
-  const group = location.state?.departmentName;
+  const group = location.state?.departmentName || "Virtual Reality";
+  
+  const filteredBlogs = blogData.find(
+    (item) => item.group.toLowerCase() === group.toLowerCase()
+  );
+  
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const groupData = blogData.find((item) => item.group === group);
-  const blogs = groupData ? groupData.list : [];
+  const toggleReadMore = (index) => {
+    setExpandedIndex((prev) => (prev === index ? null : index));
+  };
 
   return (
     <>
       <Hero page="blogs" />
       <div className={styles.blogsPage}>
-        <h1 className={styles.heading}>{group} </h1>
-        {blogs.length === 0 ? (
-          <p>No blogs available for this category.</p>
-        ) : (
-          <div className={styles.blogsGrid}>
-            {blogs.map((blog, index) => (
-              <div key={index} className={styles.blogCard}>
-                <img src={blog.image} alt={blog.title} className={styles.blogImage} />
-                <h2 className={styles.blogTitle}>{blog.title}</h2>
-                <p className={styles.blogAuthor}>{blog.author}</p>
-                <p className={styles.blogDate}>{blog.date}</p>
-                <p className={styles.blogContent}>{blog.content.slice(0, 200)}...</p>
-                <div className={styles.readMoreLink}>
-                  <a href={blog.link} target="_blank" rel="noopener noreferrer">
-                    Read more
-                  </a>
+        {filteredBlogs ? (
+          <div className={styles.blogSection}>
+            <h1 className={styles.heading}>{filteredBlogs.group}</h1>
+            <div className={styles.blogsGrid}>
+              {filteredBlogs.list.map((blog, index) => (
+                <div 
+                  key={index} 
+                  className={`${styles.blogCard} ${
+                    expandedIndex === index ? styles.expanded : ""
+                  }`}
+                >
+                  <img 
+                    src={blog.image} 
+                    alt={blog.title} 
+                    className={styles.blogImage} 
+                  />
+                  <h2 className={styles.blogTitle}>{blog.title}</h2>
+                  <p className={styles.blogAuthor}>{blog.author}</p>
+                  <p className={styles.blogDate}>{blog.date}</p>
+                  
+                  <p className={styles.blogContent}>
+                    {expandedIndex === index
+                      ? blog.content
+                      : `${blog.content.slice(0, 200)}...`}
+                  </p>
+                  
+                  <button
+                    onClick={() => toggleReadMore(index)}
+                    className={`${styles.readMoreBtn} ${
+                      expandedIndex === index ? styles.active : ""
+                    }`}
+                  >
+                    {expandedIndex === index ? "Show Less" : "Read More"}
+                  </button>
+                  
+                  {blog.link && (
+                    <div className={styles.readMoreLink}>
+                      <a href={blog.link} target="_blank" rel="noopener noreferrer">
+                        Visit Source
+                      </a>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className={styles.notFoundMessage}>
+            Blog category "{group}" not found.
           </div>
         )}
       </div>
