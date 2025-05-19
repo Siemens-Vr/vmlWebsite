@@ -111,6 +111,9 @@ return (
   </div>
 </section>
 <div className={styles.sectionDivider}>
+   <span className={styles.circle}>
+    <img src="/images/dot.jpeg" alt="Divider Icon" />
+  </span>
 </div>
 {/* {VRAbout} */}
         <section className={styles.vrSection}>
@@ -138,8 +141,7 @@ return (
     </section>
 
 {/* {Know us more} */}
-    <section className={styles.knowUsSection}
-    >
+    <section className={styles.knowUsSection}>
       <h1 className={styles.heading}>Know us more</h1>
       <div>
       <img

@@ -26,7 +26,7 @@ const TeamCarousel = () => {
       <h2>
         Meet our <span className={styles.highlight}>Talented</span> team members
       </h2>
-      <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Lab</p>
+      <p className={styles.subtitle}>The Brains Behind Virtual Mechatronics Labs</p>
       <p>Our diverse team of skilled professionals is dedicated to driving innovation and excellence in our projects</p>
       <div className={styles.blogcarousel}>
         {teamMembers.map((member, index) => (
@@ -71,7 +71,7 @@ const BlogCarousel = () => {
   return (
     <div className={styles.blogContainers}>
       <h2 className={styles.blogheading}>
-        Virtual Mechatronics <span className={styles.highlight}>Blogs</span>
+        Virtual Mechatronics Labs <span className={styles.highlight}>Blogs</span>
       </h2>
       <p className={styles.blogsubtitle}>
         Beyond Reality: <span className={styles.highlight}> Exploring the future of <strong>Tech</strong>,{" "}

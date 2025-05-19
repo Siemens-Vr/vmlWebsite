@@ -168,7 +168,25 @@
   }
   
 
-
+ .circle {
+  margin-left:auto;
+    width: 200px;
+    height: 200px;
+    border: 3px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  
+  .circle img {
+    width: 200%;
+    height: 200%;
+    object-fit: cover;
+  }
    /* Know us more */
 
    .knowUsSection {
@@ -244,6 +262,7 @@
     color: #444;
     line-height: 1.5;
   }
+  
   
   /* FAQS */
   .faqSection {

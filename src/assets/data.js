@@ -42,7 +42,7 @@ const data = [
       {
         image:"/images/team/victor.jpg",
         name: "Victor Kanumbi",
-        position: "CAD Modelling",
+        position: "VR Developer",
         description:
           "This is to increase the frame rate of the Multilab projects which are: Compressed Air Energy Process Control System, Hybrid Solar Drier Project, Virtual Machine Control Lab, Virtual Machine Control Lab 2, Digital Twin Open Source Virtual Lab, Analytic Cyber-Physical System and U Factory Xarm Robot project",
       
